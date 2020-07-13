@@ -1,0 +1,2 @@
+use 60 units for run anims
+88 units for sideways thing

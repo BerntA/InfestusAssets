@@ -1,0 +1,13 @@
+$modelname "items/crossbows/crossbow02.mdl"
+$model "studio" "ref.smd"
+$surfaceprop "metal"
+$illumposition -0.6 -7.724 -6.038
+$cdmaterials "models/items/crossbows/"
+
+$sequence "idle" {
+	"ref.smd"
+	fadein 0.2
+	fadeout 0.2
+	fps 10
+	loop
+}

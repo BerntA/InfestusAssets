@@ -1,0 +1,10 @@
+version 1
+nodes
+  0 "ValveBiped.Bip01_L_Hand" -1
+  1 "warhammer_world_model" 0
+end
+skeleton
+time 0
+    0 -0.631348 -6.656250 -3.652344 -1.785360 -1.302032 -2.847025
+    1 3.269778 -1.192617 -3.051797 -0.087485 0.060741 -0.263236
+end

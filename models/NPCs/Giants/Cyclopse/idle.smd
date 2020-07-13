@@ -1,0 +1,8 @@
+version 1
+nodes
+  0 "Plane02" -1
+end
+skeleton
+time 0
+    0 0.000000 0.000002 0.000000 1.570674 0.000061 -0.000061
+end

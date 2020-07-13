@@ -1,0 +1,448 @@
+$poseparameter move_yaw -180.00 180.00 wrap
+
+$ikchain "lfoot" "MBipLFoot" Z 0
+$ikchain "rfoot" "MBipRFoot" Z 0
+
+$ikchain "lhand" "MBipLHand" Z 0
+$ikchain "rhand" "MBipRHand" Z 0
+
+$weightlist "attacking" {
+	"MBipPelvis" "0"
+	"MBipLThigh" "0"
+	"MBipLCalf" "0"
+	"MBipLFoot" "0"
+	"MBipRThigh" "0"
+	"MBipRCalf" "0"
+	"MBipRFoot" "0"
+	"MBipSpineBase" "1"
+	"MBipSpineMid" "1"
+	"MBipSpineTop" "1"
+	"MBipNeck" "1"
+	"MBipHead" "1"
+	"MBipRShoulder" "1"
+	"MBipRBicep" "1"
+	"MBipRForearm" "1"
+	"MBipRHand" "1"
+	"MBipLShoulder" "1"
+	"MBipLBicep" "1"
+	"MBipLForearm" "1"
+	"MBipLHand" "1"
+	//"Scene_Root" "0"
+}
+
+$sequence "idle1" {
+	"idle01.smd"
+	activity "ACT_IDLE" 3
+	fadein 1
+	fadeout 1
+	fps 4
+	loop
+}
+
+$sequence "idle2" {
+	"idle02.smd"
+	activity "ACT_IDLE" 1
+	fadein 1
+	fadeout 1
+	fps 3
+	loop
+}
+
+$sequence "idle3" {
+	"idle03.smd"
+	activity "ACT_IDLE" 1
+	fadein 1
+	fadeout 1
+	fps 3
+	loop
+}
+
+$sequence "idle4" {
+	"idle04.smd"
+	activity "ACT_IDLE" 1
+	fadein 1
+	fadeout 1
+	fps 3
+	loop
+}
+
+$sequence "ragdoll" {
+	"ragdoll.smd"
+	activity "ACT_DIERAGDOLL" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 1
+}
+
+$sequence "attack_2h_sharp_slash" {
+	"anims/attack_2h_sharp_slash.smd"
+	activity "ACT_INF_MELEE_2H_SLASH" 1
+	fps 10
+	weightlist "attacking"
+}
+
+$sequence "attack_2h_sharp_smash" {
+	"anims/attack_2h_sharp_smash.smd"
+	activity "ACT_3PV_FLAMEBERGE_SLASH2" 1
+	fps 15
+	weightlist "attacking"
+}
+
+$sequence "attack_2h_sharp_stab" {
+	"anims/attack_2h_sharp_stab.smd"
+	activity "ACT_3PV_FLAMEBERGE_STAB" 1
+	fps 13
+	weightlist "attacking"
+}
+
+$sequence "attack_2h_blunt_slash1" {
+	"anims/attack_2h_blunt_slash.smd"
+	activity "ACT_INF_MELEE_2H_BLUNT_SLASH" 1
+	fps 20
+	weightlist "attacking"
+}
+
+$sequence "attack_2h_blunt_slash2" {
+	"anims/attack_2h_blunt_slash.smd"
+	activity "ACT_3PV_WARHAMMER_SLASH1" 1
+	fps 20
+	weightlist "attacking"
+}
+
+$sequence "attack_2h_blunt_smash" {
+	"anims/attack_2h_sharp_smash.smd"
+	activity "ACT_3PV_WARHAMMER_SLASH2" 1
+	fps 15
+	weightlist "attacking"
+}
+
+$sequence "attack_2h_blunt_stab" {
+	"anims/attack_2h_blunt_slash.smd"
+	activity "ACT_3PV_WARHAMMER_STAB" 1
+	fps 12
+	weightlist "attacking"
+}
+
+$sequence "attack_smash" {
+	"anims/attack01.smd"
+	activity "ACT_3PV_SWORD_SLASH2" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	weightlist "attacking"
+}
+
+$sequence "1h_attack_slash_r" {
+	"anims/1h_attack_slash_r.smd"
+	activity "ACT_INF_MELEE_1H_RIGHT_SLASH" 1
+	fps 13
+	weightlist "attacking"
+}
+
+$sequence "1h_attack_slash_l" {
+	"anims/1h_attack_slash_l.smd"
+	activity "ACT_INF_MELEE_1H_LEFT_SLASH" 1
+	fps 13
+	weightlist "attacking"
+}
+
+$sequence "1h_attack_stab" {
+	"anims/1h_attack_stab.smd"
+	activity "ACT_3PV_SHORTSWORD_STAB" 1
+	fps 12
+	weightlist "attacking"
+}
+
+$sequence "1h_shield_stab" {
+	"anims/1h_shield_stab.smd"
+	activity "ACT_3PV_SWORDSHIELD_STAB" 1
+	fps 22
+	weightlist "attacking"
+}
+
+$sequence "1h_shield_slam" {
+	"anims/1h_shield_slam.smd"
+	activity "ACT_3PV_KITE_SLASH2" 1
+	fps 22
+	weightlist "attacking"
+}
+
+$sequence "1h_attack_spin" {
+	"anims/1h_attack_spin.smd"
+	activity "ACT_INF_MELEE_1H_SPIN" 1
+	fps 13
+	weightlist "attacking"
+}
+
+$sequence "attack_2h_sharp_spin" {
+	"anims/1h_attack_spin.smd"
+	activity "ACT_INF_MELEE_2H_SPIN" 1
+	fps 13
+	weightlist "attacking"
+}
+
+$sequence "attack_2h_blunt_spin" {
+	"anims/1h_attack_spin.smd"
+	activity "ACT_INF_MELEE_2H_BLUNT_SPIN" 1
+	fps 13
+	weightlist "attacking"
+}
+
+$sequence "ranged_attack" {
+	"anims/ranged_attack.smd"
+	activity "ACT_3PV_aoc_LONGBOWSHOOT" 1
+	fps 13
+	weightlist "attacking"
+}
+
+$sequence "draw_right" {
+	"anims/draw_right.smd"
+	activity "ACT_COMBATANT_DRAW_MELEE_1H_RIGHT" 1
+	fps 16
+	weightlist "attacking"
+}
+
+$sequence "draw_left" {
+	"anims/draw_left.smd"
+	activity "ACT_COMBATANT_DRAW_MELEE_1H_LEFT" 1
+	fps 16
+	weightlist "attacking"
+}
+
+$sequence "draw_both" {
+	"anims/draw_both.smd"
+	activity "ACT_COMBATANT_DRAW_MELEE_1H_BOTH" 1
+	fps 16
+	weightlist "attacking"
+}
+
+$sequence "draw_shield_1" {
+	"anims/draw_shield.smd"
+	activity "ACT_COMBATANT_DRAW_MELEE_1H_BOTH_SHIELD" 1
+	fps 16
+	weightlist "attacking"
+}
+
+$sequence "draw_shield_2" {
+	"anims/draw_shield.smd"
+	activity "ACT_COMBATANT_DRAW_MELEE_1H_LEFT_SHIELD" 1
+	fps 16
+	weightlist "attacking"
+}
+
+$sequence "draw_ranged" {
+	"anims/draw_ranged.smd"
+	activity "ACT_COMBATANT_DRAW_RANGED" 1
+	fps 15
+	weightlist "attacking"
+}
+
+$sequence "draw_2h_sharp" {
+	"anims/draw_2h_sharp.smd"
+	activity "ACT_COMBATANT_DRAW_MELEE_2H" 1
+	fps 16
+	weightlist "attacking"
+}
+
+$sequence "holster_right" {
+	"anims/holster_right.smd"
+	activity "ACT_COMBATANT_HOLSTER_MELEE_1H_RIGHT" 1
+	fps 16
+	weightlist "attacking"
+}
+
+$sequence "holster_left" {
+	"anims/holster_left.smd"
+	activity "ACT_COMBATANT_HOLSTER_MELEE_1H_LEFT" 1
+	fps 16
+	weightlist "attacking"
+}
+
+$sequence "holster_both" {
+	"anims/holster_both.smd"
+	activity "ACT_COMBATANT_HOLSTER_MELEE_1H_BOTH" 1
+	fps 16
+	weightlist "attacking"
+}
+
+$sequence "holster_shield_1" {
+	"anims/holster_shield.smd"
+	activity "ACT_COMBATANT_HOLSTER_MELEE_1H_BOTH_SHIELD" 1
+	fps 16
+	weightlist "attacking"
+}
+
+$sequence "holster_shield_2" {
+	"anims/holster_shield.smd"
+	activity "ACT_COMBATANT_HOLSTER_MELEE_1H_LEFT_SHIELD" 1
+	fps 16
+	weightlist "attacking"
+}
+
+$sequence "holster_ranged" {
+	"anims/holster_ranged.smd"
+	activity "ACT_COMBATANT_HOLSTER_RANGED" 1
+	fps 15
+	weightlist "attacking"
+}
+
+$sequence "holster_2h_sharp" {
+	"anims/holster_2h_sharp.smd"
+	activity "ACT_COMBATANT_HOLSTER_MELEE_2H" 1
+	fps 16
+	weightlist "attacking"
+}
+
+$sequence "idle_2h_sharp" {
+	"anims/idle_2h_sharp.smd"
+	activity "ACT_3PV_FLAMEBERGE_IDLE" 1
+	fadein 1
+	fadeout 1
+	fps 3
+	loop
+}
+
+$sequence "idle_2h_blunt" {
+	"anims/idle_2h_blunt.smd"
+	activity "ACT_3PV_WARHAMMER_IDLE" 1
+	fadein 1
+	fadeout 1
+	fps 3
+	loop
+}
+
+$sequence "1h_idle" {
+	"anims/1h_idle.smd"
+	activity "ACT_IDLE_SWORD" 1
+	fadein 1
+	fadeout 1
+	fps 3
+	loop
+}
+
+$sequence "ranged_idle" {
+	"anims/ranged_idle.smd"
+	activity "ACT_3PV_aoc_LONGBOWIDLEUNDRAW" 1
+	fadein 1
+	fadeout 1
+	fps 3
+	loop
+}
+
+$animation a_WalkS "anims/walk_s" loop LX LY startloop 0 rotateto -180 { alignto idle1 }
+$animation a_WalkSE "anims/walk_se" loop LX LY startloop 0 rotateto -135 { alignto idle1 }
+$animation a_WalkE "anims/walk_e" loop LX LY startloop 0 rotateto -90 { alignto idle1 }
+$animation a_WalkNE "anims/walk_ne" loop LX LY startloop 0 rotateto -45 { alignto idle1 }
+$animation a_WalkN "anims/walk_n" loop LX LY startloop 0 rotateto 0 { alignto idle1 }
+$animation a_WalkNW "anims/walk_nw" loop LX LY startloop 0 rotateto 45  { alignto idle1 }
+$animation a_WalkW "anims/walk_w" loop LX LY startloop 0 rotateto 90 { alignto idle1 }
+$animation a_WalkSW "anims/walk_sw" loop LX LY startloop 0 rotateto 135 { alignto idle1 }
+
+$animation a_RunS "anims/run_s" loop LX LY startloop 0 rotateto -180 fps 41 { alignto idle1 }
+$animation a_RunSE "anims/run_se" loop LX LY startloop 0 rotateto -135 fps 39 { alignto idle1 }
+$animation a_RunE "anims/run_e" loop LX LY startloop 0 rotateto -90 fps 41 { alignto idle1 }
+$animation a_RunNE "anims/run_ne" loop LX LY startloop 0 rotateto -45 fps 39 { alignto idle1 }
+$animation a_RunN "anims/run_n" loop LX LY startloop 0 rotateto 0 fps 40 { alignto idle1 }
+$animation a_RunNW "anims/run_nw" loop LX LY startloop 0 rotateto 45  fps 38 { alignto idle1 }
+$animation a_RunW "anims/run_w" loop LX LY startloop 0 rotateto 90 fps 42 { alignto idle1 }
+$animation a_RunSW "anims/run_sw" loop LX LY startloop 0 rotateto 135 fps 41 { alignto idle1 }
+
+$sequence "walk" {
+	a_WalkS a_WalkSE a_WalkE
+	a_WalkNE a_WalkN a_WalkNW
+	a_WalkW a_WalkSW a_WalkS
+	blendwidth 9
+	blend "move_yaw" -180 180	
+	"ACT_WALK" 1 
+	node "walking"
+}
+
+$sequence "run" {
+	a_RunS a_RunSE a_RunE
+	a_RunNE a_RunN a_RunNW
+	a_RunW a_RunSW a_RunS
+	blendwidth 9
+	blend "move_yaw" -180 180
+	"ACT_RUN" 1 
+	node "running"	
+}
+
+$sequence "death" "anims/death.smd" activity ACT_INF_DEATH 1 fps 16 node "standing"
+$sequence "death_idle" "anims/death_idle.smd" activity ACT_INF_DEATH_IDLE 1 fps 70 node "standing"
+
+$collisionjoints "physics.smd"
+{
+	$mass 90
+	$inertia 10
+	$damping 1
+	$rotdamping 2.5
+	$rootbone "MBipPelvis"
+
+	$jointconstrain "MBipSpineBase" x limit 0 0 0
+	$jointconstrain "MBipSpineBase" y limit 0 0 0
+	$jointconstrain "MBipSpineBase" z limit 0 0 0
+
+	$jointconstrain "MBipSpineMid" x limit 0 0 0
+	$jointconstrain "MBipSpineMid" y limit 0 0 0
+	$jointconstrain "MBipSpineMid" z limit 0 0 0
+
+	$jointconstrain "MBipSpineTop" x limit 0 0 0
+	$jointconstrain "MBipSpineTop" y limit 0 0 0
+	$jointconstrain "MBipSpineTop" z limit 0 0 0
+
+	$jointconstrain "MBipRBicep" x limit -30 30 0.2
+	$jointconstrain "MBipRBicep" y limit -95 84 0.2
+	$jointconstrain "MBipRBicep" z limit -86 26 0.2
+
+	$jointconstrain "MBipRForearm" x limit 0 0 0.2
+	$jointconstrain "MBipRForearm" y limit 0 0 0.2
+	$jointconstrain "MBipRForearm" z limit -149 4 0.2
+
+	$jointconstrain "MBipLBicep" x limit -30 30 0.2
+	$jointconstrain "MBipLBicep" y limit -95 84 0.2
+	$jointconstrain "MBipLBicep" z limit -86 26 0.2
+
+	$jointconstrain "MBipNeck" x limit 0 0 0
+	$jointconstrain "MBipNeck" y limit 0 0 0
+	$jointconstrain "MBipNeck" z limit 0 0 0
+
+	$jointconstrain "MBipLForearm" x limit 0 0 0.2
+	$jointconstrain "MBipLForearm" y limit 0 0 0.2
+	$jointconstrain "MBipLForearm" z limit -149 4 0.2
+
+	$jointconstrain "MBipRHand" x limit -60 60 0.2
+	$jointconstrain "MBipRHand" y limit 0 0 0
+	$jointconstrain "MBipRHand" z limit -57 70 0.2
+
+	$jointconstrain "MBipHead" x limit -20 20 0.2
+	$jointconstrain "MBipHead" y limit -25 25 0.2
+	$jointconstrain "MBipHead" z limit -13 30 0.2
+
+	$jointconstrain "MBipRThigh" x limit 0 0 0
+	$jointconstrain "MBipRThigh" y limit 0 0 0
+	$jointconstrain "MBipRThigh" z limit -97 32 0.2
+
+	$jointconstrain "MBipRCalf" x limit 0 0 0.2
+	$jointconstrain "MBipRCalf" y limit 0 0 0.2
+	$jointconstrain "MBipRCalf" z limit -12 126 0.2
+
+	$jointconstrain "MBipLHand" x limit -60 60 0.2
+	$jointconstrain "MBipLHand" y limit 0 0 0
+	$jointconstrain "MBipLHand" z limit -57 70 0.2
+
+	$jointconstrain "MBipLThigh" x limit 0 0 0
+	$jointconstrain "MBipLThigh" y limit 0 0 0
+	$jointconstrain "MBipLThigh" z limit -97 32 0.2
+
+	$jointconstrain "MBipLCalf" x limit 0 0 0.2
+	$jointconstrain "MBipLCalf" y limit 0 0 0.2
+	$jointconstrain "MBipLCalf" z limit -12 126 0.2
+
+	$jointconstrain "MBipLFoot" x limit -28 12 0
+	$jointconstrain "MBipLFoot" y limit -8 8 0
+	$jointconstrain "MBipLFoot" z limit -26 21 0
+
+	$jointconstrain "MBipRFoot" x limit 0 0 0
+	$jointconstrain "MBipRFoot" y limit -25 6 0.2
+	$jointconstrain "MBipRFoot" z limit -15 35 0.2
+}
