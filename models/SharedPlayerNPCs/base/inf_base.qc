@@ -671,3 +671,49 @@ $sequence walk_all {
 { event 2051 9 }
 { event 2050 23 }
 }
+
+$animation a_RunS anims/RunS loop LX LY startloop 0 rotateto -180 fps 31 {
+	alignto idle01
+	// ikrule lfoot footstep 0 range .. 9 12 ..
+	// ikrule rfoot footstep 1 range .. 0 3 ..
+}
+$animation a_RunSE anims/RunSE loop LX LY startloop 0 rotateto -135 fps 29 {
+	alignto idle01
+	// ikrule lfoot footstep 0 range .. 7 11 ..
+	// ikrule rfoot footstep 1 range .. 17 1 ..
+}
+$animation a_RunE anims/RunE loop LX LY startloop 0 rotateto -90 fps 31 {
+	alignto idle01
+	// ikrule lfoot footstep 0 range .. 7 9 ..
+	// ikrule rfoot footstep 1 range .. 14 0 ..
+}
+$animation a_RunNE anims/RunNE loop LX LY startloop 0 rotateto -45 fps 29 {
+	alignto idle01
+	// ikrule lfoot footstep 0 range .. 6 10 ..
+	// ikrule rfoot footstep 1 range .. 17 19 ..
+}
+$animation a_RunN anims/RunN loop LX LY startloop 0 rotateto 0 {
+	alignto idle01
+	// ikrule lfoot footstep 0 range .. 8 10 ..
+	// ikrule rfoot footstep 1 range .. 17 1 ..
+}
+$animation a_RunNW anims/RunNW loop LX LY startloop 0 rotateto 45 fps 28 {
+	alignto idle01
+	// ikrule lfoot footstep 0 range .. 9 11 ..
+	// ikrule rfoot footstep 1 range .. 18 1 ..
+}
+$animation a_RunW anims/RunW loop LX LY startloop 0 rotateto 90 fps 32 {
+	alignto idle01
+	// ikrule lfoot footstep 0 range .. 7 9 ..
+	// ikrule rfoot footstep 1 range .. 16 0 ..
+}
+$animation a_RunSW anims/RunSW loop LX LY startloop 0 rotateto 135 fps 31 {
+	alignto idle01
+	// ikrule lfoot footstep 0 range .. 8 11 ..
+	// ikrule rfoot footstep 1 range .. 16 1 ..
+}
+
+$sequence run_all {
+	a_runS a_runSE a_runE a_runNE a_runN a_runNW a_runW a_runSW a_runS
+	blendwidth 9 blend move_yaw -180 180 ACT_RUN 1 node "running"
+}

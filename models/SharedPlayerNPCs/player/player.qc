@@ -99,13 +99,111 @@ $sequence "ragdoll" {
 
 $sequence "death" "../base/anims/death.smd" activity ACT_INF_DEATH 1 fps 35 node "standing"
 $sequence "death_idle" "../base/anims/death_idle.smd" activity ACT_INF_DEATH_IDLE 1 fps 35 node "standing"
-
 $sequence "mounted" "../base/anims/mounted.smd" fps 35
 
 $includemodel "humans/male_shared.mdl"
 $includemodel "humans/male_ss.mdl"
 $includemodel "humans/male_gestures.mdl"
 $includemodel "humans/male_postures.mdl"
+
+// HL2 Run + Walk
+
+$sequence idle01 ../base/anims/idle01 loop frames 0 358 fixuploop -15 0 activity ACT_IDLE 1 node "standing"
+
+// walking, no weapon
+$animation a_WalkS ../base/anims/WalkS loop LX LY startloop 0 rotateto -180 {
+	alignto idle01
+	// ikrule lfoot footstep 0 range  5 11 25 30
+	// ikrule rfoot footstep 1 range 22 28  6 11
+}
+$animation a_WalkSE ../base/anims/WalkSE loop LX LY startloop 0 rotateto -135 {
+	alignto idle01
+	// ikrule lfoot footstep 0 range  5  8 22 27
+	// ikrule rfoot footstep 1 range 20 25 6 11
+}
+$animation a_WalkE ../base/anims/WalkE loop LX LY startloop 0 rotateto -90 {
+	alignto idle01
+	// ikrule lfoot footstep 0 range  2  9 19 28
+	// ikrule rfoot footstep 1 range 19 24  4  8
+}
+$animation a_WalkNE ../base/anims/WalkNE loop LX LY startloop 0 rotateto -45 {
+	alignto idle01
+	// ikrule lfoot footstep 0 range  4 11 23  0
+	// ikrule rfoot footstep 1 range 18 25  8 13
+}
+$animation a_WalkN ../base/anims/WalkN loop LX LY startloop 0 rotateto 0 {
+	alignto idle01
+	// ikrule lfoot footstep 0 range  4 10 19 25
+	// ikrule rfoot footstep 1 range 18 26 3 10
+}
+$animation a_WalkNW ../base/anims/WalkNW loop LX LY startloop 0 rotateto 45 {
+	alignto idle01
+	// ikrule lfoot footstep 0 range  2  9 21 27
+	// ikrule rfoot footstep 1 range 18 25  7 13
+}
+$animation a_WalkW ../base/anims/WalkW loop LX LY startloop 0 rotateto 90 {
+	alignto idle01
+	// ikrule lfoot footstep 0 range  2 11 22 28
+	// ikrule rfoot footstep 1 range 18 27  6 13
+}
+$animation a_WalkSW ../base/anims/WalkSW loop LX LY startloop 0 rotateto 135 {
+	alignto idle01
+	// ikrule lfoot footstep 0 range  2 10 18 25
+	// ikrule rfoot footstep 1 range 16 22  7 12
+}
+
+$sequence walk_all {
+	a_walkS a_walkSE a_walkE a_walkNE a_walkN a_walkNW a_walkW a_walkSW a_walkS
+	blendwidth 9 blend move_yaw -180 180 ACT_WALK 1 node "walking"
+{ event 2051 9 }
+{ event 2050 23 }
+}
+
+$animation a_RunS ../base/anims/RunS loop LX LY startloop 0 rotateto -180 fps 31 {
+	alignto idle01
+	// ikrule lfoot footstep 0 range .. 9 12 ..
+	// ikrule rfoot footstep 1 range .. 0 3 ..
+}
+$animation a_RunSE ../base/anims/RunSE loop LX LY startloop 0 rotateto -135 fps 29 {
+	alignto idle01
+	// ikrule lfoot footstep 0 range .. 7 11 ..
+	// ikrule rfoot footstep 1 range .. 17 1 ..
+}
+$animation a_RunE ../base/anims/RunE loop LX LY startloop 0 rotateto -90 fps 31 {
+	alignto idle01
+	// ikrule lfoot footstep 0 range .. 7 9 ..
+	// ikrule rfoot footstep 1 range .. 14 0 ..
+}
+$animation a_RunNE ../base/anims/RunNE loop LX LY startloop 0 rotateto -45 fps 29 {
+	alignto idle01
+	// ikrule lfoot footstep 0 range .. 6 10 ..
+	// ikrule rfoot footstep 1 range .. 17 19 ..
+}
+$animation a_RunN ../base/anims/RunN loop LX LY startloop 0 rotateto 0 {
+	alignto idle01
+	// ikrule lfoot footstep 0 range .. 8 10 ..
+	// ikrule rfoot footstep 1 range .. 17 1 ..
+}
+$animation a_RunNW ../base/anims/RunNW loop LX LY startloop 0 rotateto 45 fps 28 {
+	alignto idle01
+	// ikrule lfoot footstep 0 range .. 9 11 ..
+	// ikrule rfoot footstep 1 range .. 18 1 ..
+}
+$animation a_RunW ../base/anims/RunW loop LX LY startloop 0 rotateto 90 fps 32 {
+	alignto idle01
+	// ikrule lfoot footstep 0 range .. 7 9 ..
+	// ikrule rfoot footstep 1 range .. 16 0 ..
+}
+$animation a_RunSW ../base/anims/RunSW loop LX LY startloop 0 rotateto 135 fps 31 {
+	alignto idle01
+	// ikrule lfoot footstep 0 range .. 8 11 ..
+	// ikrule rfoot footstep 1 range .. 16 1 ..
+}
+
+$sequence run_all {
+	a_runS a_runSE a_runE a_runNE a_runN a_runNW a_runW a_runSW a_runS
+	blendwidth 9 blend move_yaw -180 180 ACT_RUN 1 node "running"
+}
 
 $ikautoplaylock "rfoot" 1 0.1
 $ikautoplaylock "lfoot" 1 0.1
