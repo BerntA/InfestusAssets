@@ -717,3 +717,15 @@ $sequence run_all {
 	a_runS a_runSE a_runE a_runNE a_runN a_runNW a_runW a_runSW a_runS
 	blendwidth 9 blend move_yaw -180 180 ACT_RUN 1 node "running"
 }
+
+$sequence "unarmed_idle" {
+	"anims/unarmed_idle.smd"
+	activity "ACT_INF_UNARMED_IDLE" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	ikrule "rhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 100 100 target 0
+	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 100 100 target 1
+	ikrule "rfoot" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 100 100 target 2
+	ikrule "lfoot" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 100 100 target 3
+}
