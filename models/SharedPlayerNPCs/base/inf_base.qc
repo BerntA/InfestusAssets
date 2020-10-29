@@ -157,7 +157,7 @@ $sequence "slash_1h_00_r" {
 // Left
 
 $sequence "slash_1h_00_l" {
-	"anims\aoc_slash_05.smd"
+	"anims\slash_left.smd"
 	activity "ACT_INF_MELEE_1H_LEFT_SLASH" 1
 	fadein 0.2
 	fadeout 0.2
