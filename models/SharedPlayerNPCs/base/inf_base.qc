@@ -161,7 +161,7 @@ $sequence "slash_1h_00_l" {
 	activity "ACT_INF_MELEE_1H_LEFT_SLASH" 1
 	fadein 0.2
 	fadeout 0.2
-	fps 30
+	fps 42
 	ikrule "rhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 40 40 target 0
 	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 40 40 target 1
 	weightlist "weights_aoc_stab.smd"
