@@ -1,6 +1,6 @@
 
 $modelname "characters/npc/mercenary01.mdl"
-$model "body" "mercenary01_plrrig.smd"
+$model "body" "mercenary01.smd"
 
 $surfaceprop "flesh"
 
