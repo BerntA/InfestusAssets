@@ -3,7 +3,7 @@ $model "studio" "mill.smd"
 $cdmaterials "models/objects/"
 $surfaceprop "wood"
 
-$sequence "spin" "anims/mill_spin.smd" fps 60.00 loop
+$sequence "spin" "mill_spin.smd" fps 60.00 loop
 
 $collisionmodel "mill_phys.smd"
 {

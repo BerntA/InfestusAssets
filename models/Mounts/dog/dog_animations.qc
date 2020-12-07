@@ -289,7 +289,7 @@ $Animation "a_head_rot_z_lt" "anims/a_head_rot_z_lt.smd" {
 
 $Sequence "idle01" {
 	"anims/idle.smd"
-	activity "ACT_IDLE_SWORD" 1
+	activity "ACT_INF_UNARMED_IDLE" 1
 	fadein 0.2
 	fadeout 0.2
 	fps 30
@@ -309,7 +309,7 @@ $Sequence "run01" {
 	"a_run_W"
 	"a_run_SW"
 	"a_run_S"
-	activity "ACT_3PV_HL2MP_RUN_SHORTSWORD" 1
+	activity "ACT_RUN" 1
 	blend "move_yaw" -180 180
 	blendwidth 9
 	fadein 0.2

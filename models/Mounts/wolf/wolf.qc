@@ -38,7 +38,7 @@ $animation a_RunSW "anims/run_sw" loop LX LY startloop 0 rotateto 135 fps 40
 
 $sequence "idle01" {
 	"anims/idle01.smd"
-	activity "ACT_IDLE_SWORD" 1
+	activity "ACT_INF_UNARMED_IDLE" 1
 	fadein 1
 	fadeout 1
 	fps 13
@@ -47,7 +47,7 @@ $sequence "idle01" {
 
 $sequence "idle02" {
 	"anims/idle02.smd"
-	activity "ACT_IDLE_SWORD" 1
+	activity "ACT_INF_UNARMED_IDLE" 1
 	fadein 1
 	fadeout 1
 	fps 13
@@ -56,7 +56,7 @@ $sequence "idle02" {
 
 $sequence "idle03" {
 	"anims/idle03.smd"
-	activity "ACT_IDLE_SWORD" 1
+	activity "ACT_INF_UNARMED_IDLE" 1
 	fadein 1
 	fadeout 1
 	fps 8
@@ -71,7 +71,7 @@ $sequence "run" {
 	a_RunW a_RunSW a_RunS
 	blendwidth 9
 	blend "move_yaw" -180 180
-	"ACT_3PV_HL2MP_RUN_SHORTSWORD" 1	
+	"ACT_RUN" 1	
 }
 
 $sequence "ragdoll" {

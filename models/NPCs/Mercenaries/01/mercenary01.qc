@@ -1,6 +1,13 @@
 
 $modelname "characters/npc/mercenary01.mdl"
-$model "body" "mercenary01.smd"
+
+$model "body" "mercenary01.smd" {
+	eyeball "eye_right" "ValveBiped.Bip01_Head1" -1.074009 -3.425991 66.796992 "eyeball_r" 1.6 4 "iris_unused" 0.65
+	eyeball "eye_left" "ValveBiped.Bip01_Head1" 1.094991 -3.425991 66.796992 "eyeball_l" 1.6 -4 "iris_unused" 0.64
+
+	flexcontroller eyes range -35 35 "eyes_updown"
+	flexcontroller eyes range -20 20 "eyes_rightleft"
+}
 
 $surfaceprop "flesh"
 

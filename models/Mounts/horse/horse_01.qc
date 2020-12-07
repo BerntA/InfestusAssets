@@ -29,7 +29,7 @@ $animation a_RunNW "anims/run_nw" loop LX LY startloop 0 rotateto 45  fps 60
 $animation a_RunW "anims/run_w" loop LX LY startloop 0 rotateto 90 fps 60
 $animation a_RunSW "anims/run_sw" loop LX LY startloop 0 rotateto 135 fps 60
 
-$sequence "idle" "anims/idle.smd" activity ACT_IDLE_SWORD 1 fps 25.00 loop
+$sequence "idle" "anims/idle.smd" activity ACT_INF_UNARMED_IDLE 1 fps 25.00 loop
 $sequence "jump" "anims/jump.smd" activity ACT_3PV_HL2MP_JUMP_SHORTSWORD 1 fps 60.00
 
 $sequence "move" {
@@ -38,7 +38,7 @@ $sequence "move" {
 	a_RunW a_RunSW a_RunS
 	blendwidth 9
 	blend "move_yaw" -180 180
-	"ACT_3PV_HL2MP_RUN_SHORTSWORD" 1
+	"ACT_RUN" 1
 }
 
 $sequence "ragdoll" {

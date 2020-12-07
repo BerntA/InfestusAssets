@@ -4,7 +4,7 @@ $cdmaterials "models/objects/"
 $surfaceprop "wood"
 $staticprop
 
-$sequence "idle" "anims\sign02_idle.smd" activity "ACT_IDLE" 1 fps 5
+$sequence "idle" "idle.smd" activity "ACT_IDLE" 1 fps 5
 
 $collisionmodel "sign_phys.smd"
 {
