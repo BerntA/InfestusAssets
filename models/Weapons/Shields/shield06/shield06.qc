@@ -9,7 +9,8 @@ $texturegroup skinfamilies
 }
 
 $surfaceprop "metal"
-$illumposition -10.219 5.624 42.144
+//$illumposition -10.219 5.624 42.144
+$illumposition 0 0 0 infestus_base
 $cdmaterials "models/items/shields/"
 
 $sequence "idle" {

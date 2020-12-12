@@ -1,10 +1,10 @@
-$ModelName "items/helmets/helm07.mdl"
+$modelname "items/helmets/helm07.mdl"
 $model "studio" "ref.smd"
-$SurfaceProp "plaster"
-$IllumPosition 0.025 0.24 8.071
+$surfaceprop "plaster"
+$illumposition 0 0 0 ValveBiped.Bip01_Head1
 $cdmaterials "models/items/helmets/cloth/"
 
-$Sequence "idle" {
+$sequence "idle" {
 	"idle.smd"
 	activity "ACT_IDLE" 1
 	fadein 0.2

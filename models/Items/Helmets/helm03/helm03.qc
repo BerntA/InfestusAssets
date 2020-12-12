@@ -2,6 +2,7 @@ $modelname "items/helmets/helm03.mdl"
 $model "studio" "ref.smd"
 $surfaceprop "metal"
 $cdmaterials "models/items/helmets/plate/"
+$illumposition 0 0 0 ValveBiped.Bip01_Head1
 
 $sequence "idle" {
 	"idle.smd"

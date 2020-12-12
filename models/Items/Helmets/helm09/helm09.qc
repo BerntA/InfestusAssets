@@ -4,6 +4,7 @@ $model "studio" "ref.smd"
 $surfaceprop "metal"
 $cdmaterials "models/characters/npc/smugglers/"
 $cdmaterials "models/humans/male/"
+$illumposition 0 0 0 ValveBiped.Bip01_Head1
 
 $sequence "idle" {
 	"../../shared/idle.smd"
