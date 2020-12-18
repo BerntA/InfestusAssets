@@ -668,8 +668,6 @@ $animation a_WalkSW anims/WalkSW loop LX LY startloop 0 rotateto 135 {
 $sequence walk_all {
 	a_walkS a_walkSE a_walkE a_walkNE a_walkN a_walkNW a_walkW a_walkSW a_walkS
 	blendwidth 9 blend move_yaw -180 180 ACT_WALK 1 node "walking"
-{ event 2051 9 }
-{ event 2050 23 }
 }
 
 $animation a_RunS anims/RunS loop LX LY startloop 0 rotateto -180 fps 31 {
