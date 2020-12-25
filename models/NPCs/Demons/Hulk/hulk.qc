@@ -36,7 +36,7 @@ $surfaceprop "flesh"
 $contents "solid"
 $illumposition 16.252 -0.773 29.87
 $eyeposition 0 0 64
-$cdmaterials "models/characters/hulk/"
+$cdmaterials "models/characters/npc/hulk/"
 
 $attachment "eyes" "ValveBiped.Bip01_Spine4" 10.5 0 0 rotate -20 0 -180
 $attachment "head" "ValveBiped.Bip01_Spine4" 15 0 0 rotate 0 0 -180
