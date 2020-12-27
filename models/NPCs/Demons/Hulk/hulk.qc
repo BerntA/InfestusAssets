@@ -1,5 +1,4 @@
-
-$modelname "characters/hulk.mdl"
+$modelname "characters/npc/hulk.mdl"
 
 $bodygroup "studio"
 {
