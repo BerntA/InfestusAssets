@@ -116,7 +116,7 @@ $weightlist "attacking" {
 	"ValveBiped.Bip01_R_Toe0" "0"
 }
 
-$sequence "melee" {
+$sequence "melee01" {
 	"melee01.smd"
 	activity "ACT_MELEE_ATTACK1" 1
 	fadein 0.2
@@ -126,4 +126,15 @@ $sequence "melee" {
 	weightlist "attacking"
 }
 
-// todo, add death anims... + move yaw?
+$sequence "melee02" {
+	"melee01.smd"
+	activity "ACT_INF_MELEE_STAB" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 40
+	//walkframe 46 LX LY LZ
+	weightlist "attacking"
+}
+
+$sequence "death" "death.smd" activity ACT_INF_DEATH 1 fps 45
+$sequence "death_idle" "death_idle.smd" activity ACT_INF_DEATH_IDLE 1 fps 45
