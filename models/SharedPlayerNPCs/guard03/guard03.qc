@@ -1,7 +1,7 @@
 
 $modelname "characters/npc/guard03.mdl"
 
-$bodygroup "male_05"
+$bodygroup "guard"
 {
 	studio "models.smd"
 }

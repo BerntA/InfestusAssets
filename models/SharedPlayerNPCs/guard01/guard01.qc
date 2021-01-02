@@ -1,7 +1,7 @@
 
 $modelname "characters/npc/guard01.mdl"
 
-$bodygroup "male_05"
+$bodygroup "guard"
 {
 	studio "gfootman_reference.smd"
 }

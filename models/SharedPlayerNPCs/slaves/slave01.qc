@@ -1,9 +1,14 @@
 
-$modelname "characters/npc/merchant01.mdl"
+$modelname "characters/npc/slave01.mdl"
 
-$bodygroup "male_05"
+$bodygroup "slave"
 {
-	studio "peasant2_reference.smd"
+	studio "../merchants/merchant01.smd"
+}
+
+$bodygroup "weapon"
+{
+	studio "../base/pickaxe.smd"
 }
 
 $surfaceprop "flesh"
@@ -18,12 +23,28 @@ $mostlyopaque
 
 $cdmaterials "models/characters/npc/merchant/"
 $cdmaterials "models/humans/male/"
+$cdmaterials "models/items/misc/"
+
+$texturegroup "skinfamilies"
+{
+	{ "peasant_body1" "peasant_head" }
+	{ "peasant_body1" "peasant_head2" }
+	{ "peasant_body1" "peasant_head3" }
+	
+	{ "peasant_body2" "peasant_head" }
+	{ "peasant_body2" "peasant_head2" }
+	{ "peasant_body2" "peasant_head3" }
+	
+	{ "peasant_body3" "peasant_head" }
+	{ "peasant_body3" "peasant_head2" }
+	{ "peasant_body3" "peasant_head3" }
+}
 
 $cbox 0 0 0 0 0 0
 
 $bbox -13 -13 0 13 13 72
 
-$proceduralbones "peasant2.vrd"
+$proceduralbones "../merchants/merchant01.vrd"
 
 $ikchain "rhand" "ValveBiped.Bip01_R_Hand" knee 0.707 0.707 0
 $ikchain "lhand" "ValveBiped.Bip01_L_Hand" knee 0.707 0.707 0
@@ -40,19 +61,21 @@ $attachment "back_crossbow" "ValveBiped.Bip01_Spine4" 0 -5 0 rotate 0 70 180
 $attachment "waist_l" "ValveBiped.Bip01_Spine" 0 1 7 rotate -80 0 30
 $attachment "waist_r" "ValveBiped.Bip01_Spine" 0 1 -7 rotate -105 0 30
 
-$sequence "ragdoll" {
-	"peasant2_anim_@ragdoll.smd"
-	activity "ACT_DIERAGDOLL" 1
+//$includemodel "humans/male_shared.mdl"
+//$includemodel "humans/male_ss.mdl"
+//$includemodel "humans/male_gestures.mdl"
+//$includemodel "humans/male_postures.mdl"
+//$includemodel "characters/anims/shared.mdl"
+
+$sequence "work_mining" {
+	"..\base\anims\mining.smd"
+	activity "ACT_INF_WORK_MINING" 1
 	fadein 0.2
 	fadeout 0.2
-	fps 30
+	fps 28
+	loop
+	frame 10 40
 }
-
-$includemodel "humans/male_shared.mdl"
-$includemodel "humans/male_ss.mdl"
-$includemodel "humans/male_gestures.mdl"
-$includemodel "humans/male_postures.mdl"
-$includemodel "characters/anims/shared.mdl"
 
 $ikautoplaylock "rfoot" 1 0.1
 $ikautoplaylock "lfoot" 1 0.1

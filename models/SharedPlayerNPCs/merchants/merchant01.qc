@@ -1,9 +1,9 @@
 
-$modelname "characters/npc/merchant02.mdl"
+$modelname "characters/npc/merchant01.mdl"
 
-$bodygroup "male_05"
+$bodygroup "merchant"
 {
-	studio "peasant3_reference.smd"
+	studio "merchant01.smd"
 }
 
 $surfaceprop "flesh"
@@ -21,7 +21,16 @@ $cdmaterials "models/humans/male/"
 
 $texturegroup "skinfamilies"
 {
+	{ "peasant_body1" "peasant_head" }
+	{ "peasant_body1" "peasant_head2" }
+	{ "peasant_body1" "peasant_head3" }
+	
+	{ "peasant_body2" "peasant_head" }
 	{ "peasant_body2" "peasant_head2" }
+	{ "peasant_body2" "peasant_head3" }
+	
+	{ "peasant_body3" "peasant_head" }
+	{ "peasant_body3" "peasant_head2" }
 	{ "peasant_body3" "peasant_head3" }
 }
 
@@ -29,7 +38,7 @@ $cbox 0 0 0 0 0 0
 
 $bbox -13 -13 0 13 13 72
 
-$proceduralbones "peasant3.vrd"
+$proceduralbones "merchant01.vrd"
 
 $ikchain "rhand" "ValveBiped.Bip01_R_Hand" knee 0.707 0.707 0
 $ikchain "lhand" "ValveBiped.Bip01_L_Hand" knee 0.707 0.707 0
@@ -47,7 +56,7 @@ $attachment "waist_l" "ValveBiped.Bip01_Spine" 0 1 7 rotate -80 0 30
 $attachment "waist_r" "ValveBiped.Bip01_Spine" 0 1 -7 rotate -105 0 30
 
 $sequence "ragdoll" {
-	"peasant3_anim_@ragdoll.smd"
+	"ragdoll.smd"
 	activity "ACT_DIERAGDOLL" 1
 	fadein 0.2
 	fadeout 0.2

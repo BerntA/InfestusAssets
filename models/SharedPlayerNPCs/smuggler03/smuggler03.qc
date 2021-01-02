@@ -1,7 +1,7 @@
 
 $modelname "characters/npc/smuggler03.mdl"
 
-$bodygroup "male_05"
+$bodygroup "smuggler"
 {
 	studio "models.smd"
 }

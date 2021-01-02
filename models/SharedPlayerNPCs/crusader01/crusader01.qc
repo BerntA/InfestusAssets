@@ -1,7 +1,7 @@
 
 $modelname "characters/npc/crusader01.mdl"
 
-$bodygroup "male_05"
+$bodygroup "crusader"
 {
 	studio "gcrusader_reference.smd"
 }

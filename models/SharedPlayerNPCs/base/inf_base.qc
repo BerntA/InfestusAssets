@@ -735,3 +735,13 @@ $sequence "knockdown" {
 	fadeout 0.2
 	fps 26
 }
+
+$sequence "work_mining" {
+	"anims\mining.smd"
+	activity "ACT_INF_WORK_MINING" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 28
+	loop
+	frame 10 40
+}

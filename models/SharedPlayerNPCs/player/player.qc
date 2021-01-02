@@ -2,7 +2,7 @@
 
 $modelname "characters/player/player01.mdl"
 
-//$bodygroup "male_05"
+//$bodygroup "player"
 //{
 //	studio "peasant1_reference.smd"
 //}
