@@ -745,3 +745,10 @@ $sequence "work_mining" {
 	loop
 	frame 10 40
 }
+
+$sequence "preview" {
+	"anims/preview.smd"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+}
