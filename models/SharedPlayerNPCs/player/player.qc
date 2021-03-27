@@ -41,7 +41,15 @@ $maxeyedeflection 90
 $mostlyopaque
 
 $cdmaterials "models/characters/player/"
+$cdmaterials "models/characters/npc/merchant/"
 $cdmaterials "models/humans/male/"
+
+$texturegroup "skinfamilies"
+{
+	{ "peasant_head" }
+	{ "peasant_head2" }
+	{ "peasant_head3" }
+}
 
 $attachment "eyes" "ValveBiped.Bip01_Head1" 3.43 -3.51 0.05 rotate 0 -80.1 -90
 $attachment "mouth" "ValveBiped.Bip01_Head1" 0.8 -5.5 0.1 rotate 0 -80 -90
