@@ -61,21 +61,19 @@ $attachment "back_crossbow" "ValveBiped.Bip01_Spine4" 0 -5 0 rotate 0 70 180
 $attachment "waist_l" "ValveBiped.Bip01_Spine" 0 1 7 rotate -80 0 30
 $attachment "waist_r" "ValveBiped.Bip01_Spine" 0 1 -7 rotate -105 0 30
 
-//$includemodel "humans/male_shared.mdl"
-//$includemodel "humans/male_ss.mdl"
-//$includemodel "humans/male_gestures.mdl"
-//$includemodel "humans/male_postures.mdl"
-//$includemodel "characters/anims/shared.mdl"
-
-$sequence "work_mining" {
-	"..\base\anims\mining.smd"
-	activity "ACT_INF_WORK_MINING" 1
+$sequence "ragdoll" {
+	"../merchants/ragdoll.smd"
+	activity "ACT_DIERAGDOLL" 1
 	fadein 0.2
 	fadeout 0.2
-	fps 28
-	loop
-	frame 10 40
+	fps 30
 }
+
+$includemodel "humans/male_shared.mdl"
+$includemodel "humans/male_ss.mdl"
+$includemodel "humans/male_gestures.mdl"
+$includemodel "humans/male_postures.mdl"
+$includemodel "characters/anims/shared.mdl"
 
 $ikautoplaylock "rfoot" 1 0.1
 $ikautoplaylock "lfoot" 1 0.1
