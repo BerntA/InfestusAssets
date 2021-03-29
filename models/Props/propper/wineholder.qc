@@ -8,4 +8,5 @@ $surfaceprop "wood"
 $collisionmodel "wineholder_phys"  {
 	$concave
 	$mass 100.000000
+	$maxconvexpieces 200
 }

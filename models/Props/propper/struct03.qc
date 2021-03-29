@@ -8,4 +8,5 @@ $surfaceprop "plaster"
 $collisionmodel "struct03_phy"  {
 	$concave
 	$mass 100.000000
+	$maxconvexpieces 200
 }

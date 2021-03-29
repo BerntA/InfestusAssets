@@ -8,4 +8,5 @@ $surfaceprop "concrete"
 $collisionmodel "struct01_phys"  {
 	$concave
 	$mass 500.000000
+	$maxconvexpieces 200
 }
