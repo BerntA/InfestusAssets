@@ -141,6 +141,7 @@ $sequence "run" {
 
 $animation g_attack01 "anims\attack01.smd" subtract idle01 0 weightlist "movement"
 $sequence "attack01" "g_attack01" activity "ACT_MELEE_ATTACK1" 1 fps 25 delta
+$sequence "attack02" "g_attack01" activity "ACT_INF_MELEE_STAB" 1 fps 25 delta
 
 $sequence "death" "anims/death.smd" activity ACT_INF_DEATH 1 fps 30 weightlist "movement" node "standing"
 $sequence "death_idle" "anims/death_idle.smd" activity ACT_INF_DEATH_IDLE 1 fps 70 weightlist "movement" node "standing"
