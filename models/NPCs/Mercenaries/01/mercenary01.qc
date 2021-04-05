@@ -2,21 +2,17 @@
 $modelname "characters/npc/mercenary01.mdl"
 
 $model "body" "mercenary01.smd" {
-	eyeball "eye_right" "ValveBiped.Bip01_Head1" -1.074009 -3.425991 66.796992 "eyeball_r" 1.6 4 "iris_unused" 0.65
-	eyeball "eye_left" "ValveBiped.Bip01_Head1" 1.094991 -3.425991 66.796992 "eyeball_l" 1.6 -4 "iris_unused" 0.64
-
-	flexcontroller eyes range -35 35 "eyes_updown"
-	flexcontroller eyes range -20 20 "eyes_rightleft"
+	eyeball righteye "ValveBiped.Bip01_Head1" -1.1226 -2.66683 68.179 "eyeball_r" 0.84 4 "pupil_r" 0.63
+	eyeball lefteye "ValveBiped.Bip01_Head1" 1.1226 -2.66683 68.179 "eyeball_l" 0.84 -4 "pupil_l" 0.63
+	
+	flexcontroller eyes range -40 15 "eyes_updown"
+	flexcontroller eyes range -30 30 "eyes_rightleft"
 }
 
 $surfaceprop "flesh"
-
 $contents "solid"
-
 $eyeposition 0 0 70
-
 $maxeyedeflection 90
-
 $mostlyopaque
 
 $cdmaterials "models/characters/npc/mercenary/"
