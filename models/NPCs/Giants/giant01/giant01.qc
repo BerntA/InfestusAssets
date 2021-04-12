@@ -14,11 +14,29 @@ $model "studio" "giant01.smd" {
 	flexcontroller eyes range -20 20 "eyes_rightleft"
 }
 
+$bodygroup helm 
+{
+	blank
+	studio "helm_chaos.smd"
+	studio "helm_ranged.smd"
+	studio "helm_studded.smd"
+	studio "helm_legion.smd"
+	studio "helm_commander.smd"
+	studio "crown.smd"
+}
+
 $surfaceprop "flesh"
 $contents "solid"
 $illumposition -1.099 -2.032 54.056
 $eyeposition 0 0 109.006
+
 $cdmaterials "models/characters/npc/giant/"
+$cdmaterials "models/items/sovereign/"
+$cdmaterials "models/items/helmets/cloth/"
+$cdmaterials "models/items/helmets/plate/"
+$cdmaterials "models/items/helmets/mail/"
+$cdmaterials "models/characters/npc/smugglers/"
+$cdmaterials "models/characters/npc/guard/"
 
 $texturegroup "skinfamilies"
 {
