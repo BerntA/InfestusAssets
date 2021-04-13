@@ -47,11 +47,17 @@ $texturegroup "skinfamilies"
 $attachment "eyes" "MBipHead" 11.32 0.25 5.75 rotate -88.99 0.11 -179.85
 $attachment "forward" "MBipHead" 0 0 0 rotate -90 -180 0
 
-$attachment "mainhand" "MBipRHand" 5.20 0.50 0.95 rotate -90 -180 -90
-$attachment "offhand" "MBipLHand" 6.00 -0.50 1.50 rotate 90 180 90
+$attachment "mainhand" "MBipRHand" 4.50 3.50 -2.35 rotate 90 90 0
+$attachment "offhand" "MBipLHand" 4.00 2.70 1.60 rotate 90 90 0
+$attachment "offhand_shield" "MBipLHand" 4.00 2.70 1.60 rotate 90 90 0
 
-$attachment "waist_l" "MBipLThigh" 1.5 4.5 -0.75 rotate 180 -90 -65
-$attachment "waist_r" "MBipRThigh" 1.5 -4.8 -0.75 rotate 180 -90 -65
+$attachment "back" "MBipNeck" 0.00 0.00 -17.50 rotate -80 -180 -180
+$attachment "back_staff" "MBipNeck" 0.00 0.00 -17.50 rotate -80 180 -0
+$attachment "back_crossbow" "MBipNeck" 0.00 0.00 -17.50 rotate -70 -180 90
+$attachment "back_shield" "MBipNeck" -4.00 -7.50 -16.00 rotate 80 2 0
+
+$attachment "waist_l" "MBipLThigh" 2.00 8.00 -1.75 rotate -0 90 115
+$attachment "waist_r" "MBipRThigh" 2.00 7.60 1.75 rotate -0 -85 -75
 
 $cbox 0 0 0 0 0 0
 $bbox -39.003 -30.922 -7.147 43.068 28.725 115.258
@@ -122,7 +128,7 @@ $sequence "attack01" {
 	activity "ACT_MELEE_ATTACK1" 1
 	fadein 0.2
 	fadeout 0.2
-	fps 17
+	fps 32
 	weightlist "attacking"
 }
 
@@ -154,3 +160,6 @@ $sequence "ragdoll" {
 	fadeout 0.2
 	fps 1
 }
+
+$sequence "death" "anims/death.smd" activity ACT_INF_DEATH 1 fps 16 node "standing"
+$sequence "death_idle" "anims/death_idle.smd" activity ACT_INF_DEATH_IDLE 1 fps 70 node "standing"
