@@ -1,0 +1,5 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models/items/helmets/cloth/helm04"
+	"$no_draw" "1"
+}
