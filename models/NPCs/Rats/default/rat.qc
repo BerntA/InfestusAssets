@@ -7,12 +7,19 @@ $bodygroup "body"
 	studio "ref.smd"
 }
 
+$bodygroup "helm"
+{
+	blank
+	studio "crown.smd"	
+}
+
 $poseparameter move_yaw -180.00 180.00 wrap
 $surfaceprop "flesh"
 $contents "solid"
 $illumposition 28.57 -19.392 -4.063
 $eyeposition 0 -1.152 0.02
 $cdmaterials "models/characters/npc/rat/"
+$cdmaterials "models/items/helmets/plate/"
 
 $attachment "eyes" "Bip01-Head" 11.00 -4.00 0.00 rotate 0 0 90
 
