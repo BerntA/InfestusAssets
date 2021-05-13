@@ -62,12 +62,39 @@ $attachment "waist_r" "MBipRThigh" 2.00 7.60 1.75 rotate -0 -85 -75
 $cbox 0 0 0 0 0 0
 $bbox -39.003 -30.922 -7.147 43.068 28.725 115.258
 
-$sequence "idle" {
-	"idle.smd"
-	activity "ACT_IDLE" 3
+$sequence "idle01" {
+	"anims/idle_1.smd"
+	activity "ACT_IDLE" 1
 	fadein 1
 	fadeout 1
-	fps 7
+	fps 10
+	loop
+}
+
+$sequence "idle02" {
+	"anims/idle_2.smd"
+	activity "ACT_IDLE" 1
+	fadein 1
+	fadeout 1
+	fps 10
+	loop
+}
+
+$sequence "idle03" {
+	"anims/idle_3.smd"
+	activity "ACT_IDLE" 1
+	fadein 1
+	fadeout 1
+	fps 10
+	loop
+}
+
+$sequence "idle04" {
+	"anims/idle_4.smd"
+	activity "ACT_IDLE" 1
+	fadein 1
+	fadeout 1
+	fps 10
 	loop
 }
 
@@ -94,14 +121,46 @@ $weightlist "attacking" {
 	"MBipLFoot" "0"
 }
 
-$animation a_WalkS "anims/walk_s" loop LX LY startloop 0 rotateto -180 { alignto idle }
-$animation a_WalkSE "anims/walk_se" loop LX LY startloop 0 rotateto -135 { alignto idle }
-$animation a_WalkE "anims/walk_e" loop LX LY startloop 0 rotateto -90 { alignto idle }
-$animation a_WalkNE "anims/walk_ne" loop LX LY startloop 0 rotateto -45 { alignto idle }
-$animation a_WalkN "anims/walk_n" loop LX LY startloop 0 rotateto 0 { alignto idle }
-$animation a_WalkNW "anims/walk_nw" loop LX LY startloop 0 rotateto 45  { alignto idle }
-$animation a_WalkW "anims/walk_w" loop LX LY startloop 0 rotateto 90 { alignto idle }
-$animation a_WalkSW "anims/walk_sw" loop LX LY startloop 0 rotateto 135 { alignto idle }
+$weightlist "spin" {
+	"MBipPelvis" "1"
+	"MBipRThigh" "1"
+	"MBipRCalf" "1"
+	"MBipRFoot" "1"
+	"MBipSpineBase" "1"
+	"MBipSpineMid" "1"
+	"MBipSpineTop" "1"
+	"MBipLShoulder" "1"
+	"MBipLBicep" "1"
+	"MBipLForearm" "1"
+	"MBipLHand" "1"
+	"MBipRShoulder" "1"
+	"MBipRBicep" "1"
+	"MBipRForearm" "1"
+	"MBipRHand" "1"
+	"MBipNeck" "1"
+	"MBipHead" "1"
+	"MBipLThigh" "1"
+	"MBipLCalf" "1"
+	"MBipLFoot" "1"
+}
+
+$animation a_WalkS "anims/walk_s" loop LX LY startloop 0 rotateto -180 { alignto idle01 }
+$animation a_WalkSE "anims/walk_se" loop LX LY startloop 0 rotateto -135 { alignto idle01 }
+$animation a_WalkE "anims/walk_e" loop LX LY startloop 0 rotateto -90 { alignto idle01 }
+$animation a_WalkNE "anims/walk_ne" loop LX LY startloop 0 rotateto -45 { alignto idle01 }
+$animation a_WalkN "anims/walk_n" loop LX LY startloop 0 rotateto 0 { alignto idle01 }
+$animation a_WalkNW "anims/walk_nw" loop LX LY startloop 0 rotateto 45  { alignto idle01 }
+$animation a_WalkW "anims/walk_w" loop LX LY startloop 0 rotateto 90 { alignto idle01 }
+$animation a_WalkSW "anims/walk_sw" loop LX LY startloop 0 rotateto 135 { alignto idle01 }
+
+$animation a_RunS "anims/run_s" loop LX LY startloop 0 rotateto -180 fps 41 { alignto idle01 }
+$animation a_RunSE "anims/run_se" loop LX LY startloop 0 rotateto -135 fps 39 { alignto idle01 }
+$animation a_RunE "anims/run_e" loop LX LY startloop 0 rotateto -90 fps 41 { alignto idle01 }
+$animation a_RunNE "anims/run_ne" loop LX LY startloop 0 rotateto -45 fps 39 { alignto idle01 }
+$animation a_RunN "anims/run_n" loop LX LY startloop 0 rotateto 0 fps 40 { alignto idle01 }
+$animation a_RunNW "anims/run_nw" loop LX LY startloop 0 rotateto 45  fps 38 { alignto idle01 }
+$animation a_RunW "anims/run_w" loop LX LY startloop 0 rotateto 90 fps 42 { alignto idle01 }
+$animation a_RunSW "anims/run_sw" loop LX LY startloop 0 rotateto 135 fps 41 { alignto idle01 }
 
 $sequence "walk" {
 	a_WalkS a_WalkSE a_WalkE
@@ -114,23 +173,351 @@ $sequence "walk" {
 }
 
 $sequence "run" {
-	"Run.smd"
-	activity "ACT_RUN" 1
-	fadein 0.2
-	fadeout 0.2
-	fps 35
-	loop
-	walkframe 30 LX LY
+	a_RunS a_RunSE a_RunE
+	a_RunNE a_RunN a_RunNW
+	a_RunW a_RunSW a_RunS
+	blendwidth 9
+	blend "move_yaw" -180 180
+	"ACT_RUN" 1 
+	node "running"	
 }
 
-$sequence "attack01" {
-	"Attack.smd"
-	activity "ACT_MELEE_ATTACK1" 1
-	fadein 0.2
-	fadeout 0.2
-	fps 32
+// Combat
+
+// 2H Sharp
+
+$sequence "attack_2h_sharp_slash1" {
+	"anims/attack_2h_sharp_slash.smd"
+	activity "ACT_INF_MELEE_2H_SLASH" 1
+	fps 23
 	weightlist "attacking"
 }
+
+$sequence "attack_2h_sharp_slash2" {
+	"anims/attack_2h_sharp_slash.smd"
+	activity "ACT_3PV_FLAMEBERGE_SLASH1" 1
+	fps 23
+	weightlist "attacking"
+}
+
+$sequence "attack_2h_sharp_smash1" {
+	"anims/attack_2h_sharp_smash.smd"
+	activity "ACT_3PV_FLAMEBERGE_SLASH2" 1
+	fps 20
+	weightlist "attacking"
+}
+
+$sequence "attack_2h_sharp_smash2" {
+	"anims/attack_2h_sharp_smash.smd"
+	activity "ACT_INF_MELEE_2H_SMASH" 1
+	fps 20
+	weightlist "attacking"
+}
+
+$sequence "attack_2h_sharp_stab1" {
+	"anims/attack_2h_sharp_stab.smd"
+	activity "ACT_3PV_FLAMEBERGE_STAB" 1
+	fps 25
+	weightlist "attacking"
+}
+
+$sequence "attack_2h_sharp_stab2" {
+	"anims/attack_2h_sharp_stab.smd"
+	activity "ACT_INF_MELEE_2H_STAB" 1
+	fps 25
+	weightlist "attacking"
+}
+
+// 2H blunt
+
+$sequence "attack_2h_blunt_slash1" {
+	"anims/attack_2h_blunt_slash.smd"
+	activity "ACT_INF_MELEE_2H_BLUNT_SLASH" 1
+	fps 22
+	weightlist "attacking"
+}
+
+$sequence "attack_2h_blunt_slash2" {
+	"anims/attack_2h_blunt_slash.smd"
+	activity "ACT_3PV_WARHAMMER_SLASH1" 1
+	fps 22
+	weightlist "attacking"
+}
+
+$sequence "attack_2h_blunt_smash1" {
+	"anims/attack_2h_blunt_smash.smd"
+	activity "ACT_3PV_WARHAMMER_SLASH2" 1
+	fps 20
+	weightlist "attacking"
+}
+
+$sequence "attack_2h_blunt_smash2" {
+	"anims/attack_2h_blunt_smash.smd"
+	activity "ACT_INF_MELEE_2H_BLUNT_SMASH" 1
+	fps 20
+	weightlist "attacking"
+}
+
+$sequence "attack_2h_blunt_stab1" {
+	"anims/attack_2h_blunt_stab.smd"
+	activity "ACT_3PV_WARHAMMER_STAB" 1
+	fps 22
+	weightlist "attacking"
+}
+
+$sequence "attack_2h_blunt_stab2" {
+	"anims/attack_2h_blunt_stab.smd"
+	activity "ACT_INF_MELEE_2H_BLUNT_STAB" 1
+	fps 22
+	weightlist "attacking"
+}
+
+// 1H
+
+$sequence "attack_1h_slash_r" {
+	"anims/attack_1h_slash_r.smd"
+	activity "ACT_INF_MELEE_1H_RIGHT_SLASH" 1
+	fps 30
+	weightlist "attacking"
+}
+
+$sequence "attack_1h_slash_generic" {
+	"anims/attack_1h_slash_r.smd"
+	activity "ACT_3PV_SLASH" 1
+	fps 30
+	weightlist "attacking"
+}
+
+$sequence "attack_1h_slash_l" {
+	"anims/attack_1h_slash_l.smd"
+	activity "ACT_INF_MELEE_1H_LEFT_SLASH" 1
+	fps 30
+	weightlist "attacking"
+}
+
+$sequence "attack_1h_stab1" {
+	"anims/attack_1h_stab.smd"
+	activity "ACT_3PV_SHORTSWORD_STAB" 1
+	fps 30
+	weightlist "attacking"
+}
+
+$sequence "attack_1h_stab2" {
+	"anims/attack_1h_stab.smd"
+	activity "ACT_INF_MELEE_1H_RIGHT_STAB" 1
+	fps 30
+	weightlist "attacking"
+}
+
+$sequence "attack_1h_smash1" {
+	"anims/attack_1h_smash.smd"
+	activity "ACT_INF_MELEE_1H_RIGHT_SMASH" 1
+	fps 30
+	weightlist "attacking"
+}
+
+$sequence "attack_1h_smash2" {
+	"anims/attack_1h_smash.smd"
+	activity "ACT_3PV_SWORD_SLASH2" 1
+	fps 30
+	weightlist "attacking"
+}
+
+$sequence "attack_1h_shield_slash" {
+	"anims/attack_1h_slash_r.smd"
+	activity "ACT_3PV_SWORDSHIELD_SLASH1" 1
+	fps 30
+	weightlist "attacking"
+}
+
+$sequence "attack_1h_shield_smash" {
+	"anims/shield_slam.smd"
+	activity "ACT_3PV_SPEARSHIELD_SLASH2" 1
+	fps 30
+	weightlist "attacking"
+}
+
+$sequence "attack_1h_shield_stab" {
+	"anims/attack_1h_stab.smd"
+	activity "ACT_3PV_SWORDSHIELD_STAB" 1
+	fps 30
+	weightlist "attacking"
+}
+
+$sequence "attack_1h_shield_slam" {
+	"anims/shield_slam.smd"
+	activity "ACT_3PV_KITE_SLASH2" 1
+	fps 30
+	weightlist "attacking"
+}
+
+// SPIN
+
+$sequence "attack_1h_spin" {
+	"anims/attack_1h_spin.smd"
+	activity "ACT_INF_MELEE_1H_SPIN" 1
+	fps 50
+	weightlist "spin"
+}
+
+$sequence "attack_2h_sharp_spin" {
+	"anims/attack_2h_sharp_spin.smd"
+	activity "ACT_INF_MELEE_2H_SPIN" 1
+	fps 50
+	weightlist "spin"
+}
+
+$sequence "attack_2h_blunt_spin" {
+	"anims/attack_2h_blunt_spin.smd"
+	activity "ACT_INF_MELEE_2H_BLUNT_SPIN" 1
+	fps 50
+	weightlist "spin"
+}
+
+// OTHER
+
+$sequence "attack_ranged" {
+	"anims/attack_ranged.smd"
+	activity "ACT_3PV_aoc_LONGBOWSHOOT" 1
+	fps 30
+	weightlist "attacking"
+}
+
+$sequence "draw_right" {
+	"anims/draw_1h.smd"
+	activity "ACT_COMBATANT_DRAW_MELEE_1H_RIGHT" 1
+	fps 25
+	weightlist "attacking"
+}
+
+$sequence "draw_left" {
+	"anims/draw_1h.smd"
+	activity "ACT_COMBATANT_DRAW_MELEE_1H_LEFT" 1
+	fps 25
+	weightlist "attacking"
+}
+
+$sequence "draw_both" {
+	"anims/draw_both.smd"
+	activity "ACT_COMBATANT_DRAW_MELEE_1H_BOTH" 1
+	fps 25
+	weightlist "attacking"
+}
+
+$sequence "draw_shield_1" {
+	"anims/draw_shield_1.smd"
+	activity "ACT_COMBATANT_DRAW_MELEE_1H_BOTH_SHIELD" 1
+	fps 25
+	weightlist "attacking"
+}
+
+$sequence "draw_shield_2" {
+	"anims/draw_shield_2.smd"
+	activity "ACT_COMBATANT_DRAW_MELEE_1H_LEFT_SHIELD" 1
+	fps 25
+	weightlist "attacking"
+}
+
+$sequence "draw_ranged" {
+	"anims/draw_ranged.smd"
+	activity "ACT_COMBATANT_DRAW_RANGED" 1
+	fps 25
+	weightlist "attacking"
+}
+
+$sequence "draw_2h_sharp" {
+	"anims/draw_2h_sharp.smd"
+	activity "ACT_COMBATANT_DRAW_MELEE_2H" 1
+	fps 25
+	weightlist "attacking"
+}
+
+$sequence "holster_right" {
+	"anims/holster_1h.smd"
+	activity "ACT_COMBATANT_HOLSTER_MELEE_1H_RIGHT" 1
+	fps 25
+	weightlist "attacking"
+}
+
+$sequence "holster_left" {
+	"anims/holster_1h.smd"
+	activity "ACT_COMBATANT_HOLSTER_MELEE_1H_LEFT" 1
+	fps 25
+	weightlist "attacking"
+}
+
+$sequence "holster_both" {
+	"anims/holster_both.smd"
+	activity "ACT_COMBATANT_HOLSTER_MELEE_1H_BOTH" 1
+	fps 25
+	weightlist "attacking"
+}
+
+$sequence "holster_shield_1" {
+	"anims/holster_shield_1.smd"
+	activity "ACT_COMBATANT_HOLSTER_MELEE_1H_BOTH_SHIELD" 1
+	fps 25
+	weightlist "attacking"
+}
+
+$sequence "holster_shield_2" {
+	"anims/holster_shield_2.smd"
+	activity "ACT_COMBATANT_HOLSTER_MELEE_1H_LEFT_SHIELD" 1
+	fps 25
+	weightlist "attacking"
+}
+
+$sequence "holster_ranged" {
+	"anims/holster_ranged.smd"
+	activity "ACT_COMBATANT_HOLSTER_RANGED" 1
+	fps 25
+	weightlist "attacking"
+}
+
+$sequence "holster_2h_sharp" {
+	"anims/holster_2h_sharp.smd"
+	activity "ACT_COMBATANT_HOLSTER_MELEE_2H" 1
+	fps 25
+	weightlist "attacking"
+}
+
+$sequence "idle_2h_sharp" {
+	"anims/idle_2h_sharp.smd"
+	activity "ACT_3PV_FLAMEBERGE_IDLE" 1
+	fadein 1
+	fadeout 1
+	fps 3
+	loop
+}
+
+$sequence "idle_2h_blunt" {
+	"anims/idle_2h_blunt.smd"
+	activity "ACT_3PV_WARHAMMER_IDLE" 1
+	fadein 1
+	fadeout 1
+	fps 3
+	loop
+}
+
+$sequence "idle_1h" {
+	"anims/idle_1h.smd"
+	activity "ACT_IDLE_SWORD" 1
+	fadein 1
+	fadeout 1
+	fps 3
+	loop
+}
+
+$sequence "idle_ranged" {
+	"anims/idle_ranged.smd"
+	activity "ACT_3PV_aoc_LONGBOWIDLEUNDRAW" 1
+	fadein 1
+	fadeout 1
+	fps 3
+	loop
+}
+
+// Combat end
 
 $sequence "standtosit" {
 	"standtosit.smd"
