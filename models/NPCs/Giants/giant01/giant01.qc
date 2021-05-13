@@ -62,6 +62,15 @@ $attachment "waist_r" "MBipRThigh" 2.00 7.60 1.75 rotate -0 -85 -75
 $cbox 0 0 0 0 0 0
 $bbox -39.003 -30.922 -7.147 43.068 28.725 115.258
 
+$sequence "merch_idle" {
+	"anims/idle_1.smd"
+	activity "ACT_INF_NPC_IDLE" 1
+	fadein 1
+	fadeout 1
+	fps 10
+	loop
+}
+
 $sequence "idle01" {
 	"anims/idle_1.smd"
 	activity "ACT_IDLE" 1
