@@ -383,6 +383,99 @@ $sequence "attack_2h_blunt_spin" {
 	weightlist "spin"
 }
 
+// CASTING
+
+$sequence "cast_start" {
+	"anims/2cast_start.smd"
+	activity "ACT_INF_MAGIC_CAST_START" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 25
+	weightlist "attacking"
+}
+
+$sequence "cast_loop" {
+	"anims/2cast_idle.smd"
+	activity "ACT_INF_MAGIC_CAST_IDLE" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 20
+}
+
+$sequence "cast_end" {
+	"anims/2cast_end.smd"
+	activity "ACT_INF_MAGIC_CAST_END" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 25
+	weightlist "attacking"
+}
+
+$sequence "cast_start_instant" {
+	"anims/1cast_instant_start.smd"
+	activity "ACT_INF_MAGIC_CAST_INSTANT_START" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 34
+	weightlist "attacking"
+}
+
+$sequence "cast_loop_instant" {
+	"anims/1cast_instant_idle.smd"
+	activity "ACT_INF_MAGIC_CAST_INSTANT_IDLE" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 20
+	weightlist "attacking"
+}
+
+$sequence "cast_end_instant" {
+	"anims/1cast_instant_end.smd"
+	activity "ACT_INF_MAGIC_CAST_INSTANT_END" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 34
+	weightlist "attacking"
+}
+
+// BLOCKING
+
+$sequence "block_1h" {
+	"anims/block_1h.smd"
+	activity "ACT_3PV_SWORD_BLOCK" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	weightlist "attacking"
+}
+
+$sequence "block_2h_sharp" {
+	"anims/block_2h_sharp.smd"
+	activity "ACT_3PV_FLAMEBERGE_BLOCK" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	weightlist "attacking"
+}
+
+$sequence "block_2h_blunt" {
+	"anims/block_2h_blunt.smd"
+	activity "ACT_3PV_WARHAMMER_BLOCK" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	weightlist "attacking"
+}
+
+$sequence "block_shield" {
+	"anims/block_shield.smd"
+	activity "ACT_3PV_KITE_BLOCK" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	weightlist "attacking"
+}
+
 // OTHER
 
 $sequence "attack_ranged" {
