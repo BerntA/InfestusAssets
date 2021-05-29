@@ -62,6 +62,14 @@ $attachment "waist_r" "MBipRThigh" 2.00 7.60 1.75 rotate -0 -85 -75
 $cbox 0 0 0 0 0 0
 $bbox -39.003 -30.922 -7.147 43.068 28.725 115.258
 
+$sequence "ragdoll" {
+	"ragdoll.smd"
+	activity "ACT_DIERAGDOLL" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 1
+}
+
 $sequence "merch_idle" {
 	"anims/idle_1.smd"
 	activity "ACT_INF_NPC_IDLE" 1
@@ -153,23 +161,23 @@ $weightlist "spin" {
 	"MBipLFoot" "1"
 }
 
-$animation a_WalkS "anims/walk_s" loop LX LY startloop 0 rotateto -180 { alignto idle01 }
-$animation a_WalkSE "anims/walk_se" loop LX LY startloop 0 rotateto -135 { alignto idle01 }
-$animation a_WalkE "anims/walk_e" loop LX LY startloop 0 rotateto -90 { alignto idle01 }
-$animation a_WalkNE "anims/walk_ne" loop LX LY startloop 0 rotateto -45 { alignto idle01 }
-$animation a_WalkN "anims/walk_n" loop LX LY startloop 0 rotateto 0 { alignto idle01 }
-$animation a_WalkNW "anims/walk_nw" loop LX LY startloop 0 rotateto 45  { alignto idle01 }
-$animation a_WalkW "anims/walk_w" loop LX LY startloop 0 rotateto 90 { alignto idle01 }
-$animation a_WalkSW "anims/walk_sw" loop LX LY startloop 0 rotateto 135 { alignto idle01 }
+$animation a_WalkS "anims/walk_s" loop LX LY startloop 0 rotateto -180 { alignto ragdoll }
+$animation a_WalkSE "anims/walk_se" loop LX LY startloop 0 rotateto -135 { alignto ragdoll }
+$animation a_WalkE "anims/walk_e" loop LX LY startloop 0 rotateto -90 { alignto ragdoll }
+$animation a_WalkNE "anims/walk_ne" loop LX LY startloop 0 rotateto -45 { alignto ragdoll }
+$animation a_WalkN "anims/walk_n" loop LX LY startloop 0 rotateto 0 { alignto ragdoll }
+$animation a_WalkNW "anims/walk_nw" loop LX LY startloop 0 rotateto 45  { alignto ragdoll }
+$animation a_WalkW "anims/walk_w" loop LX LY startloop 0 rotateto 90 { alignto ragdoll }
+$animation a_WalkSW "anims/walk_sw" loop LX LY startloop 0 rotateto 135 { alignto ragdoll }
 
-$animation a_RunS "anims/run_s" loop LX LY startloop 0 rotateto -180 fps 41 { alignto idle01 }
-$animation a_RunSE "anims/run_se" loop LX LY startloop 0 rotateto -135 fps 39 { alignto idle01 }
-$animation a_RunE "anims/run_e" loop LX LY startloop 0 rotateto -90 fps 41 { alignto idle01 }
-$animation a_RunNE "anims/run_ne" loop LX LY startloop 0 rotateto -45 fps 39 { alignto idle01 }
-$animation a_RunN "anims/run_n" loop LX LY startloop 0 rotateto 0 fps 40 { alignto idle01 }
-$animation a_RunNW "anims/run_nw" loop LX LY startloop 0 rotateto 45  fps 38 { alignto idle01 }
-$animation a_RunW "anims/run_w" loop LX LY startloop 0 rotateto 90 fps 42 { alignto idle01 }
-$animation a_RunSW "anims/run_sw" loop LX LY startloop 0 rotateto 135 fps 41 { alignto idle01 }
+$animation a_RunS "anims/run_s" loop LX LY startloop 0 rotateto -180 fps 41 { alignto ragdoll }
+$animation a_RunSE "anims/run_se" loop LX LY startloop 0 rotateto -135 fps 39 { alignto ragdoll }
+$animation a_RunE "anims/run_e" loop LX LY startloop 0 rotateto -90 fps 41 { alignto ragdoll }
+$animation a_RunNE "anims/run_ne" loop LX LY startloop 0 rotateto -45 fps 39 { alignto ragdoll }
+$animation a_RunN "anims/run_n" loop LX LY startloop 0 rotateto 0 fps 40 { alignto ragdoll }
+$animation a_RunNW "anims/run_nw" loop LX LY startloop 0 rotateto 45  fps 38 { alignto ragdoll }
+$animation a_RunW "anims/run_w" loop LX LY startloop 0 rotateto 90 fps 42 { alignto ragdoll }
+$animation a_RunSW "anims/run_sw" loop LX LY startloop 0 rotateto 135 fps 41 { alignto ragdoll }
 
 $sequence "walk" {
 	a_WalkS a_WalkSE a_WalkE
@@ -642,13 +650,5 @@ $sequence "sittostand" {
 	fps 15
 }
 
-$sequence "ragdoll" {
-	"ragdoll.smd"
-	activity "ACT_DIERAGDOLL" 1
-	fadein 0.2
-	fadeout 0.2
-	fps 1
-}
-
-$sequence "death" "anims/death.smd" activity ACT_INF_DEATH 1 fps 16 node "standing"
+$sequence "death" "anims/death.smd" activity ACT_INF_DEATH 1 fps 20 node "standing"
 $sequence "death_idle" "anims/death_idle.smd" activity ACT_INF_DEATH_IDLE 1 fps 70 node "standing"
