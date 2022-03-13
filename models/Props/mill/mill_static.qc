@@ -4,7 +4,7 @@ $cdmaterials "models/objects/"
 $surfaceprop "wood"
 $staticprop
 
-$sequence "idle" "mill.smd" fps 10.00
+$sequence "idle" "mill_idle.smd" fps 10.00
 
 $collisionmodel "mill_phys.smd"
 {
