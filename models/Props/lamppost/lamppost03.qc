@@ -1,12 +1,12 @@
-$modelname "objects/lamppost01_nobase.mdl"
-$model "studio" "lamppost01_nobase.smd"
+$modelname "objects/lamppost03.mdl"
+$model "studio" "lamppost03.smd"
 $cdmaterials "models/objects/"
 $surfaceprop "wood"
 $staticprop
 
-$sequence "idle" "idle.smd" activity "ACT_IDLE" 1 fps 5
+$sequence "idle" "lamppost02_idle.smd" activity "ACT_IDLE" 1 fps 5
 
-$collisionmodel "lamppost01_nobase_phy.smd"
+$collisionmodel "lamppost03_phy.smd"
 {
     $mass 85.00
     $inertia 1.00
