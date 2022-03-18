@@ -70,6 +70,42 @@ $sequence "ragdoll" {
 	fps 1
 }
 
+// Look
+$weightlist "head_look" {
+	"MBipPelvis" "0"
+	"MBipRThigh" "0"
+	"MBipRCalf" "0"
+	"MBipRFoot" "0"
+	"MBipSpineBase" "0"
+	"MBipSpineMid" "0"
+	"MBipSpineTop" "0"
+	"MBipLShoulder" "0"
+	"MBipLBicep" "0"
+	"MBipLForearm" "0"
+	"MBipLHand" "0"
+	"MBipRShoulder" "0"
+	"MBipRBicep" "0"
+	"MBipRForearm" "0"
+	"MBipRHand" "0"
+	"MBipNeck" "0.9"
+	"MBipHead" "0.9"
+	"MBipLThigh" "0"
+	"MBipLCalf" "0"
+	"MBipLFoot" "0"
+}
+
+$animation head_neutral "anims/look_up" frame 0 0 weightlist head_look
+
+$animation head_up "anims/look_up" frame 1 1 subtract head_neutral 0 weightlist head_look
+$animation head_down "anims/look_down" frame 1 1 subtract head_neutral 0 weightlist head_look
+
+$animation head_right "anims/look_right" frame 1 1 subtract head_neutral 0 weightlist head_look
+$animation head_left "anims/look_left" frame 1 1 subtract head_neutral 0 weightlist head_look
+
+$sequence head_pitch { head_up head_down blend "head_pitch" -30 80 } delta autoplay hidden
+$sequence head_yaw { head_right head_left blend "head_yaw" -80 80 } delta autoplay hidden
+// END
+
 $sequence "merch_idle" {
 	"anims/idle_1.smd"
 	activity "ACT_INF_NPC_IDLE" 1
