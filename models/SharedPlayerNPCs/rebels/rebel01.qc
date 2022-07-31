@@ -43,6 +43,8 @@ $texturegroup "skinfamilies"
 	{ "peasant_body3" "peasant_head" }
 	{ "peasant_body3" "peasant_head2" }
 	{ "peasant_body3" "peasant_head3" }
+	
+	{ "peasant_body_dead1" "peasant_head_dead1" }
 }
 
 $cbox 0 0 0 0 0 0
