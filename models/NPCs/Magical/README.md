@@ -30,3 +30,29 @@ mold_recede
 fire_medium_02
 burning_character
 ```
+
+### Entity Burn FX
+Set IgniteModel <value> to enable a dynamic fire effect on the entity, ex:
+```
+$keyvalues
+{
+	MagicModel
+	{
+		Alive
+		{
+			name "fire_medium_02"
+			attachment_point "body"
+		}
+		Dead
+		{
+			name "mold_recede"
+			attachment_point "body"
+		}
+	}
+	
+	IgniteModel 1
+}
+```
+
+- IgniteModel 1 will enable the effect for corpses as well.
+- IgniteModel 2 will only spawn for non corpses.

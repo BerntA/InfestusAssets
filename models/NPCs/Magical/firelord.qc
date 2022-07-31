@@ -7,7 +7,7 @@ $keyvalues
 	{
 		Alive
 		{
-			name "burning_character"
+			name "fire_medium_02"
 			attachment_point "body"
 		}
 		Dead
@@ -16,4 +16,6 @@ $keyvalues
 			attachment_point "body"
 		}
 	}
+	
+	IgniteModel 2
 }
