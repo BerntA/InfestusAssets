@@ -457,6 +457,63 @@ $sequence "stab_2h_blunt" {
 	addlayer "stab_2h_blunt_mod"
 }
 
+// MONSTER SUPPORT ANIMS
+
+$sequence "monster_slash_generic" {
+	"anims\aoc_slash_01.smd"
+	activity "ACT_MELEE_ATTACK1" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	ikrule "rhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 40 40 target 0
+	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 40 40 target 1
+	weightlist "weights_aoc_stab.smd"
+}
+
+$sequence "monster_slash_right" {
+	"anims\aoc_slash_01.smd"
+	activity "ACT_INF_MELEE_SLASH_RIGHT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	ikrule "rhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 40 40 target 0
+	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 40 40 target 1
+	weightlist "weights_aoc_stab.smd"
+}
+
+$sequence "monster_slash_left" {
+	"anims\slash_left.smd"
+	activity "ACT_INF_MELEE_SLASH_LEFT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 42
+	ikrule "rhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 40 40 target 0
+	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 40 40 target 1
+	weightlist "weights_aoc_stab.smd"
+}
+
+$sequence "monster_stab" {
+	"a_stab_1h"
+	activity "ACT_INF_MELEE_STAB" 1
+	delta
+	fadein 0.2
+	fadeout 0.2
+	iklock "lfoot" 1 0
+	iklock "rfoot" 1 0
+	addlayer "stab_1h_mod"
+}
+
+$sequence "monster_smash" {
+	"a_smash_1h"
+	activity "ACT_INF_MELEE_SMASH" 1
+	delta
+	fadein 0.2
+	fadeout 0.2
+	iklock "lfoot" 1 0
+	iklock "rfoot" 1 0
+	addlayer "smash_1h_mod"
+}
+
 // DRAW Generic
 
 $sequence "draw_1h_l" {
