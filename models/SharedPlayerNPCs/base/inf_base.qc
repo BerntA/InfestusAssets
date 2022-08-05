@@ -680,6 +680,18 @@ $sequence "mounted" "anims/mounted.smd" fps 35
 $sequence idle01 anims/idle01 loop frames 0 358 fixuploop -15 0 activity ACT_IDLE 1 node "standing"
 $sequence "merch_idle" anims/idle01 loop frames 0 358 fixuploop -15 0 activity ACT_INF_NPC_IDLE 1
 
+$sequence "monster_idle_angry" {
+	"anims/aoc_idle_sword.smd"
+	activity "ACT_IDLE_ANGRY" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	ikrule "rhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 100 100 target 0
+	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 100 100 target 1
+	ikrule "rfoot" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 100 100 target 2
+	ikrule "lfoot" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 100 100 target 3
+}
+
 // walking, no weapon
 $animation a_WalkS anims/WalkS loop LX LY startloop 0 rotateto -180 {
 	alignto idle01
