@@ -10,7 +10,7 @@ $ikchain "lhand" "ValveBiped.Bip01_L_Hand" knee 0.707 0.707 0
 $ikchain "rfoot" "ValveBiped.Bip01_R_Foot" knee 0.707 -0.707 0
 $ikchain "lfoot" "ValveBiped.Bip01_L_Foot" knee 0.707 -0.707 0
 
-$weightlist "weights_aoc_stab.smd" {
+$weightlist "weightattacking" {
 	 "ValveBiped.Bip01_Pelvis" 0
 	 "ValveBiped.Bip01_Spine" 1
 	 "ValveBiped.Bip01_Spine1" 1
@@ -96,7 +96,7 @@ $sequence "slash_1h_05_r" {
 	fps 30
 	ikrule "rhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 40 40 target 0
 	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 40 40 target 1
-	weightlist "weights_aoc_stab.smd"
+	weightlist "weightattacking"
 }
 
 $sequence "slash_1h_04_r" {
@@ -107,7 +107,7 @@ $sequence "slash_1h_04_r" {
 	fps 30
 	ikrule "rhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 40 40 target 0
 	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 40 40 target 1
-	weightlist "weights_aoc_stab.smd"
+	weightlist "weightattacking"
 }
 
 $sequence "slash_1h_03_r" {
@@ -118,7 +118,7 @@ $sequence "slash_1h_03_r" {
 	fps 30
 	ikrule "rhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 40 40 target 0
 	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 40 40 target 1
-	weightlist "weights_aoc_stab.smd"
+	weightlist "weightattacking"
 }
 
 $sequence "slash_1h_02_r" {
@@ -129,7 +129,7 @@ $sequence "slash_1h_02_r" {
 	fps 30
 	ikrule "rhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 40 40 target 0
 	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 40 40 target 1
-	weightlist "weights_aoc_stab.smd"
+	weightlist "weightattacking"
 }
 
 $sequence "slash_1h_01_r" {
@@ -140,7 +140,7 @@ $sequence "slash_1h_01_r" {
 	fps 30
 	ikrule "rhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 40 40 target 0
 	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 40 40 target 1
-	weightlist "weights_aoc_stab.smd"
+	weightlist "weightattacking"
 }
 
 $sequence "slash_1h_00_r" {
@@ -151,7 +151,7 @@ $sequence "slash_1h_00_r" {
 	fps 30
 	ikrule "rhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 50 50 target 0
 	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 50 50 target 1
-	weightlist "weights_aoc_stab.smd"
+	weightlist "weightattacking"
 }
 
 // Left
@@ -164,7 +164,7 @@ $sequence "slash_1h_00_l" {
 	fps 42
 	ikrule "rhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 40 40 target 0
 	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 40 40 target 1
-	weightlist "weights_aoc_stab.smd"
+	weightlist "weightattacking"
 }
 
 // Special Attacks
@@ -178,7 +178,7 @@ $animation "a_stab_1h" "anims\a_stab_1h.smd" {
 	fps 32
 	loop
 	subtract "a_stab_corrective" 0
-	weightlist "weights_aoc_stab.smd"
+	weightlist "weightattacking"
 }
 
 $sequence "stab_1h_mod" {
@@ -191,7 +191,7 @@ $sequence "stab_1h_mod" {
 	ikrule "rhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 36 36 target 0 usesequence 
 	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 36 36 target 1 usesequence 
 	walkframe 36 LX LY
-	weightlist "weights_aoc_stab.smd"
+	weightlist "weightattacking"
 }
 
 $sequence "stab_1h" {
@@ -214,7 +214,7 @@ $animation "a_smash_1h" "anims\a_smash_1h.smd" {
 	fps 83
 	loop
 	subtract "a_smash_1h_corrective" 0
-	weightlist "weights_aoc_stab.smd"
+	weightlist "weightattacking"
 }
 
 $sequence "smash_1h_mod" {
@@ -227,7 +227,7 @@ $sequence "smash_1h_mod" {
 	ikrule "rhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 100 100 target 0 usesequence 
 	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 100 100 target 1 usesequence 
 	walkframe 100 LX LY
-	weightlist "weights_aoc_stab.smd"
+	weightlist "weightattacking"
 }
 
 $sequence "smash_1h" {
@@ -250,7 +250,7 @@ $animation "a_slash_2h" "anims\a_slash_2h.smd" {
 	fps 48
 	loop
 	subtract "a_slash_2h_corrective" 0
-	weightlist "weights_aoc_stab.smd"
+	weightlist "weightattacking"
 }
 
 $sequence "slash_2h_mod" {
@@ -263,7 +263,7 @@ $sequence "slash_2h_mod" {
 	ikrule "rhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 75 75 target 0 usesequence 
 	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 75 75 target 1 usesequence 
 	walkframe 75 LX LY
-	weightlist "weights_aoc_stab.smd"
+	weightlist "weightattacking"
 }
 
 $sequence "slash_2h" {
@@ -286,7 +286,7 @@ $animation "a_smash_2h" "anims\a_smash_2h.smd" {
 	fps 47
 	loop
 	subtract "a_smash_2h_corrective" 0
-	weightlist "weights_aoc_stab.smd"
+	weightlist "weightattacking"
 }
 
 $sequence "smash_2h_mod" {
@@ -299,7 +299,7 @@ $sequence "smash_2h_mod" {
 	ikrule "rhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 75 75 target 0 usesequence 
 	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 75 75 target 1 usesequence 
 	walkframe 75 LX LY
-	weightlist "weights_aoc_stab.smd"
+	weightlist "weightattacking"
 }
 
 $sequence "smash_2h" {
@@ -322,7 +322,7 @@ $animation "a_stab_2h" "anims\a_stab_2h.smd" {
 	fps 48
 	loop
 	subtract "a_stab_2h_corrective" 0
-	weightlist "weights_aoc_stab.smd"
+	weightlist "weightattacking"
 }
 
 $sequence "stab_2h_mod" {
@@ -335,7 +335,7 @@ $sequence "stab_2h_mod" {
 	ikrule "rhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 75 75 target 0 usesequence 
 	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 75 75 target 1 usesequence 
 	walkframe 75 LX LY
-	weightlist "weights_aoc_stab.smd"
+	weightlist "weightattacking"
 }
 
 $sequence "stab_2h" {
@@ -358,7 +358,7 @@ $animation "a_slash_2h_blunt" "anims\a_slash_2h_blunt.smd" {
 	fps 56
 	loop
 	subtract "a_slash_2h_blunt_corrective" 0
-	weightlist "weights_aoc_stab.smd"
+	weightlist "weightattacking"
 }
 
 $sequence "slash_2h_blunt_mod" {
@@ -371,7 +371,7 @@ $sequence "slash_2h_blunt_mod" {
 	ikrule "rhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 100 100 target 0 usesequence 
 	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 100 100 target 1 usesequence 
 	walkframe 100 LX LY
-	weightlist "weights_aoc_stab.smd"
+	weightlist "weightattacking"
 }
 
 $sequence "slash_2h_blunt" {
@@ -394,7 +394,7 @@ $animation "a_smash_2h_blunt" "anims\a_smash_2h_blunt.smd" {
 	fps 53
 	loop
 	subtract "a_smash_2h_blunt_corrective" 0
-	weightlist "weights_aoc_stab.smd"
+	weightlist "weightattacking"
 }
 
 $sequence "smash_2h_blunt_mod" {
@@ -407,7 +407,7 @@ $sequence "smash_2h_blunt_mod" {
 	ikrule "rhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 100 100 target 0 usesequence 
 	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 100 100 target 1 usesequence 
 	walkframe 100 LX LY
-	weightlist "weights_aoc_stab.smd"
+	weightlist "weightattacking"
 }
 
 $sequence "smash_2h_blunt" {
@@ -430,7 +430,7 @@ $animation "a_stab_2h_blunt" "anims\a_stab_2h_blunt.smd" {
 	fps 53
 	loop
 	subtract "a_stab_2h_blunt_corrective" 0
-	weightlist "weights_aoc_stab.smd"
+	weightlist "weightattacking"
 }
 
 $sequence "stab_2h_blunt_mod" {
@@ -443,7 +443,7 @@ $sequence "stab_2h_blunt_mod" {
 	ikrule "rhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 100 100 target 0 usesequence 
 	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 100 100 target 1 usesequence 
 	walkframe 100 LX LY
-	weightlist "weights_aoc_stab.smd"
+	weightlist "weightattacking"
 }
 
 $sequence "stab_2h_blunt" {
@@ -467,7 +467,7 @@ $sequence "monster_slash_generic" {
 	fps 30
 	ikrule "rhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 40 40 target 0
 	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 40 40 target 1
-	weightlist "weights_aoc_stab.smd"
+	weightlist "weightattacking"
 }
 
 $sequence "monster_slash_right" {
@@ -478,7 +478,7 @@ $sequence "monster_slash_right" {
 	fps 30
 	ikrule "rhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 40 40 target 0
 	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 40 40 target 1
-	weightlist "weights_aoc_stab.smd"
+	weightlist "weightattacking"
 }
 
 $sequence "monster_slash_left" {
@@ -489,7 +489,7 @@ $sequence "monster_slash_left" {
 	fps 42
 	ikrule "rhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 40 40 target 0
 	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 40 40 target 1
-	weightlist "weights_aoc_stab.smd"
+	weightlist "weightattacking"
 }
 
 $sequence "monster_stab" {
@@ -524,7 +524,7 @@ $sequence "draw_1h_l" {
 	fps 30
 	ikrule "rhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 40 40 target 0
 	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 40 40 target 1
-	weightlist "weights_aoc_stab.smd"
+	weightlist "weightattacking"
 }
 
 $sequence "draw_1h_l_shield" {
@@ -535,7 +535,7 @@ $sequence "draw_1h_l_shield" {
 	fps 30
 	ikrule "rhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 40 40 target 0
 	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 40 40 target 1
-	weightlist "weights_aoc_stab.smd"
+	weightlist "weightattacking"
 }
 
 $sequence "draw_1h_r" {
@@ -546,7 +546,7 @@ $sequence "draw_1h_r" {
 	fps 30
 	ikrule "rhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 40 40 target 0
 	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 40 40 target 1
-	weightlist "weights_aoc_stab.smd"
+	weightlist "weightattacking"
 }
 
 $sequence "draw_1h_b" {
@@ -557,7 +557,7 @@ $sequence "draw_1h_b" {
 	fps 30
 	ikrule "rhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 40 40 target 0
 	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 40 40 target 1
-	weightlist "weights_aoc_stab.smd"
+	weightlist "weightattacking"
 }
 
 $sequence "draw_1h_b_shield" {
@@ -568,7 +568,7 @@ $sequence "draw_1h_b_shield" {
 	fps 30
 	ikrule "rhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 40 40 target 0
 	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 40 40 target 1
-	weightlist "weights_aoc_stab.smd"
+	weightlist "weightattacking"
 }
 
 $sequence "draw_ranged" {
@@ -579,7 +579,7 @@ $sequence "draw_ranged" {
 	fps 30
 	ikrule "rhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 40 40 target 0
 	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 40 40 target 1
-	weightlist "weights_aoc_stab.smd"
+	weightlist "weightattacking"
 }
 
 $sequence "draw_2h" {
@@ -590,7 +590,7 @@ $sequence "draw_2h" {
 	fps 30
 	ikrule "rhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 40 40 target 0
 	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 40 40 target 1
-	weightlist "weights_aoc_stab.smd"
+	weightlist "weightattacking"
 }
 
 // Holster Generic
@@ -603,7 +603,7 @@ $sequence "holster_1h_l" {
 	fps 30
 	ikrule "rhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 40 40 target 0
 	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 40 40 target 1
-	weightlist "weights_aoc_stab.smd"
+	weightlist "weightattacking"
 }
 
 $sequence "holster_1h_l_shield" {
@@ -614,7 +614,7 @@ $sequence "holster_1h_l_shield" {
 	fps 30
 	ikrule "rhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 40 40 target 0
 	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 40 40 target 1
-	weightlist "weights_aoc_stab.smd"
+	weightlist "weightattacking"
 }
 
 $sequence "holster_1h_r" {
@@ -625,7 +625,7 @@ $sequence "holster_1h_r" {
 	fps 30
 	ikrule "rhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 40 40 target 0
 	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 40 40 target 1
-	weightlist "weights_aoc_stab.smd"
+	weightlist "weightattacking"
 }
 
 $sequence "holster_1h_b" {
@@ -636,7 +636,7 @@ $sequence "holster_1h_b" {
 	fps 30
 	ikrule "rhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 40 40 target 0
 	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 40 40 target 1
-	weightlist "weights_aoc_stab.smd"
+	weightlist "weightattacking"
 }
 
 $sequence "holster_1h_b_shield" {
@@ -647,7 +647,7 @@ $sequence "holster_1h_b_shield" {
 	fps 30
 	ikrule "rhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 40 40 target 0
 	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 40 40 target 1
-	weightlist "weights_aoc_stab.smd"
+	weightlist "weightattacking"
 }
 
 $sequence "holster_ranged" {
@@ -658,7 +658,7 @@ $sequence "holster_ranged" {
 	fps 30
 	ikrule "rhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 40 40 target 0
 	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 40 40 target 1
-	weightlist "weights_aoc_stab.smd"
+	weightlist "weightattacking"
 }
 
 $sequence "holster_2h" {
@@ -669,7 +669,7 @@ $sequence "holster_2h" {
 	fps 30
 	ikrule "rhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 40 40 target 0
 	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 40 40 target 1
-	weightlist "weights_aoc_stab.smd"
+	weightlist "weightattacking"
 }
 
 $sequence "death" "anims/death.smd" activity ACT_INF_DEATH 1 fps 35 node "standing"
@@ -806,11 +806,11 @@ $sequence "knockdown" {
 }
 
 $sequence "work_mining" {
-	"anims\mining.smd"
+	"anims\mining_old.smd"
 	activity "ACT_INF_WORK_MINING" 1
 	fadein 0.2
 	fadeout 0.2
-	fps 28
+	fps 25
 	loop
 	frame 10 40
 }
@@ -820,4 +820,76 @@ $sequence "preview" {
 	fadein 0.2
 	fadeout 0.2
 	fps 30
+}
+
+// SpellCast
+
+$sequence "cast_start" {
+	"anims/cast_start.smd"
+	activity "ACT_INF_MAGIC_CAST_START" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 25
+	weightlist "weightattacking"
+}
+
+$sequence "cast_loop" {
+	"anims/cast_loop.smd"
+	activity "ACT_INF_MAGIC_CAST_IDLE" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 20
+}
+
+$sequence "cast_loop_gesture" {
+	"anims/cast_loop.smd"
+	activity "ACT_INF_MAGIC_CAST_IDLE_GESTURE" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 20
+	weightlist "weightattacking"
+}
+
+$sequence "cast_end" {
+	"anims/cast_end.smd"
+	activity "ACT_INF_MAGIC_CAST_END" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 25
+	weightlist "weightattacking"
+}
+
+$sequence "cast_start_instant" {
+	"anims/cast_start_instant.smd"
+	activity "ACT_INF_MAGIC_CAST_INSTANT_START" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 34
+	weightlist "weightattacking"
+}
+
+$sequence "cast_loop_instant" {
+	"anims/cast_loop_instant.smd"
+	activity "ACT_INF_MAGIC_CAST_INSTANT_IDLE" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 20
+}
+
+$sequence "cast_loop_instant_gesture" {
+	"anims/cast_loop_instant.smd"
+	activity "ACT_INF_MAGIC_CAST_INSTANT_IDLE_GESTURE" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 20
+	weightlist "weightattacking"
+}
+
+$sequence "cast_end_instant" {
+	"anims/cast_end_instant.smd"
+	activity "ACT_INF_MAGIC_CAST_INSTANT_END" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 34
+	weightlist "weightattacking"
 }
