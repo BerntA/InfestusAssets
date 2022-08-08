@@ -810,7 +810,7 @@ $sequence "work_mining" {
 	activity "ACT_INF_WORK_MINING" 1
 	fadein 0.2
 	fadeout 0.2
-	fps 25
+	fps 28
 	loop
 	frame 10 40
 }
@@ -829,7 +829,7 @@ $sequence "cast_start" {
 	activity "ACT_INF_MAGIC_CAST_START" 1
 	fadein 0.2
 	fadeout 0.2
-	fps 25
+	fps 30
 	weightlist "weightattacking"
 }
 
@@ -838,7 +838,7 @@ $sequence "cast_loop" {
 	activity "ACT_INF_MAGIC_CAST_IDLE" 1
 	fadein 0.2
 	fadeout 0.2
-	fps 20
+	fps 25
 }
 
 $sequence "cast_loop_gesture" {
@@ -846,7 +846,7 @@ $sequence "cast_loop_gesture" {
 	activity "ACT_INF_MAGIC_CAST_IDLE_GESTURE" 1
 	fadein 0.2
 	fadeout 0.2
-	fps 20
+	fps 25
 	weightlist "weightattacking"
 }
 
@@ -864,7 +864,7 @@ $sequence "cast_start_instant" {
 	activity "ACT_INF_MAGIC_CAST_INSTANT_START" 1
 	fadein 0.2
 	fadeout 0.2
-	fps 34
+	fps 35
 	weightlist "weightattacking"
 }
 
@@ -873,7 +873,7 @@ $sequence "cast_loop_instant" {
 	activity "ACT_INF_MAGIC_CAST_INSTANT_IDLE" 1
 	fadein 0.2
 	fadeout 0.2
-	fps 20
+	fps 25
 }
 
 $sequence "cast_loop_instant_gesture" {
@@ -881,7 +881,7 @@ $sequence "cast_loop_instant_gesture" {
 	activity "ACT_INF_MAGIC_CAST_INSTANT_IDLE_GESTURE" 1
 	fadein 0.2
 	fadeout 0.2
-	fps 20
+	fps 25
 	weightlist "weightattacking"
 }
 
@@ -890,6 +890,6 @@ $sequence "cast_end_instant" {
 	activity "ACT_INF_MAGIC_CAST_INSTANT_END" 1
 	fadein 0.2
 	fadeout 0.2
-	fps 34
+	fps 35
 	weightlist "weightattacking"
 }
