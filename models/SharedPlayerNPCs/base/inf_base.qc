@@ -806,13 +806,13 @@ $sequence "knockdown" {
 }
 
 $sequence "work_mining" {
-	"anims\mining_old.smd"
+	"anims\mining.smd"
 	activity "ACT_INF_WORK_MINING" 1
 	fadein 0.2
 	fadeout 0.2
-	fps 28
+	fps 30
 	loop
-	frame 10 40
+	//frame 10 40 << old anim started and ended in idle, skip those frames.
 }
 
 $sequence "preview" {
