@@ -470,7 +470,7 @@ $sequence "cast_loop_instant" {
 	fadein 0.2
 	fadeout 0.2
 	fps 20
-	weightlist "attacking"
+	//weightlist "attacking" -- should not be defined as a gesture.
 }
 
 $sequence "cast_end_instant" {
