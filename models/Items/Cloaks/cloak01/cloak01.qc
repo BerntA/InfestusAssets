@@ -9,6 +9,13 @@ $illumposition 0 5.968 49.277
 $cbox 0 0 0 0 0 0
 $bbox -16.892 -21.459 21.48 4.955 21.459 77.074
 
+$texturegroup skinfamilies
+{
+	{ "cloak01" }
+	{ "cloak01_fire" }
+	{ "cloak01_frost" }
+}
+
 $jigglebone "Cape_L1"
 {
 	is_flexible
