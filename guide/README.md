@@ -1,3 +1,12 @@
+# Table of Contents
+1. [Introduction](#introduction)
+2. [Item Creator](#item-creator)
+3. [Level Design](#level-design)
+4. [3D Art](#3d-art)
+5. [Animation](#animation)
+6. [Scripting](#scripting)
+7. [Server Hosting](#server-hosting)
+
 # Introduction
 
 This document will define a rough foundation for new developers, and modders who seek to contribute to Infestus!
@@ -208,7 +217,7 @@ Mounts only need a few anims
 * Jump - ACT_3PV_HL2MP_JUMP_SHORTSWORD
 * Run Cycle - ACT_RUN
 
-# Coding & Scripting
+# Scripting
 
 ### Soundscapes
 All soundscapes can be created in a similar fashion to stock HL2. The only additions include the support for randomized music and looping mp3 files.
