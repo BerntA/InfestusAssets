@@ -5,7 +5,7 @@ This document will define a rough foundation for new developers, and modders who
 ### Some useful links
 * [Maps](https://github.com/BerntA/SourceEngineMaps/tree/master/infestus)
 * [Scripts & Localization](https://github.com/BerntA/InfestusScripting)
-* [Hammer++ for Infestus](https://steamcommunity.com/linkfilter/?url=https://drive.google.com/file/d/1sfXZ86JtATNgFGQjeb2EzyxuSWs131fY/view?usp=sharing)
+* [Hammer++ for Infestus](https://drive.google.com/file/d/1sfXZ86JtATNgFGQjeb2EzyxuSWs131fY/view)
 * [Wavosaur](https://www.wavosaur.com/download.php)
 * [LAME MP3 Encoder](https://lame.sourceforge.io/)
 * [Blender](https://www.blender.org/)
