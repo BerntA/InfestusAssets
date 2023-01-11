@@ -1,11 +1,12 @@
 # Table of Contents
 1. [Introduction](#introduction)
-2. [Item Creator](#item-creator)
-3. [Level Design](#level-design)
-4. [3D Art](#3d-art)
-5. [Animation](#animation)
-6. [Scripting](#scripting)
-7. [Server Hosting](#server-hosting)
+2. [Workshop](#workshop)
+3. [Item Creator](#item-creator)
+4. [Level Design](#level-design)
+5. [3D Art](#3d-art)
+6. [Animation](#animation)
+7. [Scripting](#scripting)
+8. [Server Hosting](#server-hosting)
 
 # Introduction
 
@@ -14,11 +15,33 @@ This document will define a rough foundation for new developers, and modders who
 ### Some useful links
 * [Maps](https://github.com/BerntA/SourceEngineMaps/tree/master/infestus)
 * [Scripts & Localization](https://github.com/BerntA/InfestusScripting)
+* [GitHub Issues](https://github.com/BerntA/InfestusIssues)
 * [Hammer++ for Infestus](https://drive.google.com/file/d/1sfXZ86JtATNgFGQjeb2EzyxuSWs131fY/view)
 * [Wavosaur](https://www.wavosaur.com/download.php)
 * [LAME MP3 Encoder](https://lame.sourceforge.io/)
 * [Blender](https://www.blender.org/)
 * [Blender Source Tools](https://developer.valvesoftware.com/wiki/Blender_Source_Tools)
+
+# Workshop
+We strongly encourage the community to contribute via [Steam Workshop](https://steamcommunity.com/app/656800/workshop/), it is a great way to share your creations with anyone who owns the game!
+If you wish to upload a workshop addon, please ensure that:
+* There are no memes
+* No sexual content
+* No exploits
+* Maintains a decent fantasy medieval atmosphere!
+
+### Uploader Tool
+Infestus ships with a simple workshop uploader tool, launch it from *common/infestus/workshop/workshopper.exe*. Use this tool to create & upload your addons: select which tags it represents, give it some title & description, and finally select the respective content to upload.
+
+**Disclaimer**: When you select the content to upload, ensure that the content is not packed into one or multiple VPK files, the tool will generate VPKs for supported files automatically!
+
+#### View, Update & Create Addons
+![Workshop Tool](./workshopper-1.png)
+
+#### Creation Window
+![Workshop Create Dialog](./workshopper-2.png)
+
+Lastly, remember to agree to the workshop [Steam Subscriber Agreement](https://steamcommunity.com/sharedfiles/workshoplegalagreement), otherwise you will not be able to upload/create a workshop addon!
 
 # Item Creator
 
@@ -59,10 +82,17 @@ It also has a wiki feature which exports all the data to a JSON file which can b
 * chest_object - A treasure chest, box, etc.
 * game_chat - Write directly to the game chat.
 * logic_stopwatch - Create a timed event, give unique rewards if the players manage to do what you want before the timer runs out.
+* logic_bernoulli - Can be used to trigger rare events with a better RNG.
+* env_night_cycle - Set Day Night Cycle in the map properties to override, use this entity to trigger on time based events, for example you may schedule an invasion event for 10pm.
 
 Lots of legacy, and HL2 entities have been removed to make the game cheaper, simpler and to reduce the cost of networking. This enforces the use of the correct entities, the cheapest ones. All physics prop, and ragdoll stuff has also been removed.
 
-**Disclaimer**: The worldspawn ent (map properties) allow setting a default soundscape which will play when the player is not touching any volumes defined. And you may set what type of map it is: World, Dungeon or Lobby.
+### Worldspawn Properties
+* Default Soundscape - Play this soundscape when the player is not within any func_soundscape volume.
+* Map Type - Set to World or Dungeon.
+* Day Skybox Texture.
+* Night Skybox Texture.
+* Day Night Cycle - Override implies that you have to put a env_night_cycle in the map, if set to automatic, a env_night_cycle will be inserted on map spawn at (0,0,0).
 
 # 3D Art
 
