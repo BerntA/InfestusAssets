@@ -444,6 +444,7 @@ $sequence "cast_loop" {
 	fadein 0.2
 	fadeout 0.2
 	fps 20
+	weightlist "attacking"
 }
 
 $sequence "cast_end" {
@@ -470,7 +471,7 @@ $sequence "cast_loop_instant" {
 	fadein 0.2
 	fadeout 0.2
 	fps 20
-	//weightlist "attacking" -- should not be defined as a gesture.
+	weightlist "attacking"
 }
 
 $sequence "cast_end_instant" {

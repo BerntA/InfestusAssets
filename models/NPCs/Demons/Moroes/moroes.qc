@@ -165,6 +165,7 @@ $sequence "castloop" {
 	fadein 0.2
 	fadeout 0.2
 	fps 10
+	weightlist "attacking"
 }
 
 $sequence "castend" {
@@ -191,6 +192,7 @@ $sequence "castloop_instant" {
 	fadein 0.2
 	fadeout 0.2
 	fps 20
+	weightlist "attacking"
 }
 
 $sequence "castend_instant" {

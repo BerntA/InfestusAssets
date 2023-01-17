@@ -839,14 +839,6 @@ $sequence "cast_loop" {
 	fadein 0.2
 	fadeout 0.2
 	fps 25
-}
-
-$sequence "cast_loop_gesture" {
-	"anims/cast_loop.smd"
-	activity "ACT_INF_MAGIC_CAST_IDLE_GESTURE" 1
-	fadein 0.2
-	fadeout 0.2
-	fps 25
 	weightlist "weightattacking"
 }
 
@@ -871,14 +863,6 @@ $sequence "cast_start_instant" {
 $sequence "cast_loop_instant" {
 	"anims/cast_loop_instant.smd"
 	activity "ACT_INF_MAGIC_CAST_INSTANT_IDLE" 1
-	fadein 0.2
-	fadeout 0.2
-	fps 25
-}
-
-$sequence "cast_loop_instant_gesture" {
-	"anims/cast_loop_instant.smd"
-	activity "ACT_INF_MAGIC_CAST_INSTANT_IDLE_GESTURE" 1
 	fadein 0.2
 	fadeout 0.2
 	fps 25
