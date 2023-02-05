@@ -17,6 +17,7 @@ This document will define a rough foundation for new developers, and modders who
 * [Scripts & Localization](https://github.com/BerntA/InfestusScripting)
 * [GitHub Issues](https://github.com/BerntA/InfestusIssues)
 * [Hammer++ for Infestus](https://drive.google.com/file/d/1sfXZ86JtATNgFGQjeb2EzyxuSWs131fY/view)
+* [Crowbar](https://github.com/ZeqMacaw/Crowbar/releases)
 * [Wavosaur](https://www.wavosaur.com/download.php)
 * [LAME MP3 Encoder](https://lame.sourceforge.io/)
 * [Blender](https://www.blender.org/)
