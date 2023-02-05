@@ -127,6 +127,9 @@ If you use specular and normal maps together, be sure to embed the specular in t
 ![Item Creator Tool](./vtfedit-3.png)
 ![Item Creator Tool](./vtfedit-2.png)
 
+#### Photoshop Texture Template
+![Photoshop Texture Settings](./ps-1.png)
+
 # Animation
 
 See [Anim Blending](https://developer.valvesoftware.com/wiki/Blend_sequence) for how to setup proper movement cycles which changes based on the movement YAW. 
