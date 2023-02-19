@@ -16,12 +16,15 @@ This document will define a rough foundation for new developers, and modders who
 * [Maps](https://github.com/BerntA/SourceEngineMaps/tree/master/infestus)
 * [Scripts & Localization](https://github.com/BerntA/InfestusScripting)
 * [GitHub Issues](https://github.com/BerntA/InfestusIssues)
-* [Hammer++ for Infestus](https://drive.google.com/file/d/1sfXZ86JtATNgFGQjeb2EzyxuSWs131fY/view)
+* [Hammer++ for Infestus](https://drive.google.com/file/d/1SNWkgazqh3Sh1enKLRowtlqtctDgyGUZ/view)
 * [Crowbar](https://github.com/ZeqMacaw/Crowbar/releases)
 * [Wavosaur](https://www.wavosaur.com/download.php)
 * [LAME MP3 Encoder](https://lame.sourceforge.io/)
 * [Blender](https://www.blender.org/)
 * [Blender Source Tools](https://developer.valvesoftware.com/wiki/Blender_Source_Tools)
+* [VMT Generator](https://gamebanana.com/tools/6796)
+* [VTF Edit](https://developer.valvesoftware.com/wiki/VTFEdit)
+* [GCFScape](https://developer.valvesoftware.com/wiki/GCFScape)
 
 # Workshop
 We strongly encourage the community to contribute via [Steam Workshop](https://steamcommunity.com/app/656800/workshop/), it is a great way to share your creations with anyone who owns the game!
