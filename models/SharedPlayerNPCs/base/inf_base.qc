@@ -86,6 +86,21 @@ $sequence "merch_greet2" {
 	fps 30
 }
 
+$sequence "taunt01" {
+	"anims\taunt01.smd"
+	activity "ACT_INF_TAUNT" 1
+	fadein 0.5
+	fadeout 0.5
+	fps 40
+	
+	ikrule "rhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 100 100 target 0
+	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 100 100 target 1
+	ikrule "rfoot" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 100 100 target 2
+	ikrule "lfoot" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 100 100 target 3
+	
+	weightlist "weightattacking"
+}
+
 // Right
 
 $sequence "slash_1h_05_r" {
