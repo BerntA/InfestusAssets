@@ -31,6 +31,12 @@ $shadowlod
 	replacemodel "eknight_reference.smd" "eknight_body0_model0_lod6.smd"
 }
 
+$texturegroup skinfamilies
+{
+	{ "smuggler02_head"	"smuggler02_body" }
+	{ "smuggler02_head"	"smuggler02_body_molten" }
+}
+
 $surfaceprop "flesh"
 
 $contents "solid"
