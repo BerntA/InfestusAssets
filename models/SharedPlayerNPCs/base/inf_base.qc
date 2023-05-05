@@ -830,6 +830,25 @@ $sequence "work_mining" {
 	//frame 10 40 << old anim started and ended in idle, skip those frames.
 }
 
+$sequence "work_blacksmithing_01" {
+	"anims\blacksmithing.smd"
+	activity "ACT_INF_WORK_BLACKSMITH_LONG" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	loop
+}
+
+$sequence "work_blacksmithing_02" {
+	"anims\blacksmithing.smd"
+	activity "ACT_INF_WORK_BLACKSMITH_SHORT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	loop
+	frame 0 28
+}
+
 $sequence "preview" {
 	"anims/preview.smd"
 	fadein 0.2
