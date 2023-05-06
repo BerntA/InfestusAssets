@@ -15,7 +15,7 @@ This document will define a rough foundation for new developers, and modders who
 ### Some useful links
 * [Maps](https://github.com/BerntA/SourceEngineMaps/tree/master/infestus)
 * [Scripts & Localization](https://github.com/BerntA/InfestusScripting)
-* [Trello Board](https://trello.com/b/WXSzasHk/infestus-online-rpg-game)
+* [Trello Board](https://trello.com/b/WXSzasHk/infestus-roadmap)
 * [Hammer++ for Infestus](https://drive.google.com/file/d/1SNWkgazqh3Sh1enKLRowtlqtctDgyGUZ/view)
 * [Crowbar](https://github.com/ZeqMacaw/Crowbar/releases)
 * [Wavosaur](https://www.wavosaur.com/download.php)
