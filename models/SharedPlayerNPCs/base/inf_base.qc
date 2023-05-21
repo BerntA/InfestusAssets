@@ -800,6 +800,39 @@ $sequence run_all {
 	blendwidth 9 blend move_yaw -180 180 ACT_RUN 1 node "running"
 }
 
+// swimming
+$sequence swim_idle anims/swim_idle loop frames 0 58 fixuploop -15 0 activity ACT_SWIM_IDLE 1 node "standing" fps 34
+
+$animation a_SwimS anims/SwimS loop LX LY startloop 0 rotateto -180 {
+	alignto swim_idle
+}
+$animation a_SwimSE anims/SwimSE loop LX LY startloop 0 rotateto -135 {
+	alignto swim_idle
+}
+$animation a_SwimE anims/SwimE loop LX LY startloop 0 rotateto -90 {
+	alignto swim_idle
+}
+$animation a_SwimNE anims/SwimNE loop LX LY startloop 0 rotateto -45 {
+	alignto swim_idle
+}
+$animation a_SwimN anims/SwimN loop LX LY startloop 0 rotateto 0 {
+	alignto swim_idle
+}
+$animation a_SwimNW anims/SwimNW loop LX LY startloop 0 rotateto 45 {
+	alignto swim_idle
+}
+$animation a_SwimW anims/SwimW loop LX LY startloop 0 rotateto 90 {
+	alignto swim_idle
+}
+$animation a_SwimSW anims/SwimSW loop LX LY startloop 0 rotateto 135 {
+	alignto swim_idle
+}
+
+$sequence swim_all {
+	a_SwimS a_SwimSE a_SwimE a_SwimNE a_SwimN a_SwimNW a_SwimW a_SwimSW a_SwimS
+	blendwidth 9 blend move_yaw -180 180 ACT_SWIM 1 node "running"
+}
+
 $sequence "unarmed_idle" {
 	"anims/unarmed_idle.smd"
 	activity "ACT_INF_UNARMED_IDLE" 1
