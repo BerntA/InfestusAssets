@@ -655,6 +655,24 @@ $sequence "idle_1h" {
 	loop
 }
 
+$sequence "idle_staff" {
+	"anims/idle_1h.smd"
+	activity "ACT_3PV_AXE_IDLE" 1
+	fadein 1
+	fadeout 1
+	fps 3
+	loop
+}
+
+$sequence "idle_angry_default" {
+	"anims/idle_1h.smd"
+	activity "ACT_IDLE_ANGRY" 1
+	fadein 1
+	fadeout 1
+	fps 3
+	loop
+}
+
 $sequence "idle_ranged" {
 	"anims/idle_ranged.smd"
 	activity "ACT_3PV_aoc_LONGBOWIDLEUNDRAW" 1
