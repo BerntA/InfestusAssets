@@ -9,6 +9,13 @@ $bodygroup "slave"
 $bodygroup "weapon"
 {
 	studio "../base/pickaxe.smd"
+	studio "../base/hammer.smd"
+}
+
+$bodygroup "extra"
+{
+	blank
+	studio "../base/swordcraft.smd"
 }
 
 $surfaceprop "flesh"
@@ -24,6 +31,8 @@ $mostlyopaque
 $cdmaterials "models/characters/npc/merchant/"
 $cdmaterials "models/humans/male/"
 $cdmaterials "models/items/misc/"
+$cdmaterials "models/items/maces/"
+$cdmaterials "models/items/swords/"
 
 $texturegroup "skinfamilies"
 {
