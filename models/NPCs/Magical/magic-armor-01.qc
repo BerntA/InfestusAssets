@@ -55,4 +55,9 @@ $keyvalues
 			attachment_point	"eye_r"
 		}
 	}
+	
+	"NoShadows" "1"
+	"NoGlow" "1"
+	"NoMatOverrides" "1"
+	"NoFlexAnims" "0"
 }
