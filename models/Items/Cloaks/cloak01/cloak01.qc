@@ -16,88 +16,111 @@ $texturegroup skinfamilies
 	{ "cloak01_frost" }
 }
 
-$jigglebone "Cape_L1"
+// REMEMBER TO SET ROLL TO 180 FOR EVERY BONE @ BONE DATA
+
+$jigglebone "CapeJiggle01"
 {
 	is_flexible
 	{
 		length 20
-		tip_mass 10
-		pitch_stiffness 30
-		pitch_damping 5
-		yaw_stiffness 40
-		yaw_damping 5
-		along_stiffness 100
-		along_damping 0
-		pitch_constraint -60.000002 15
-		pitch_friction 0
-		pitch_bounce 0
-		yaw_constraint -19.999999 15
-		yaw_friction 0
-		yaw_bounce 0
-		angle_constraint 74.999999
-	}
-}
-$jigglebone "Cape_L2"
-{
-	is_flexible
-	{
-		length 25
-		tip_mass 12
-		pitch_stiffness 60
-		pitch_damping 5
+		tip_mass 5
+		pitch_stiffness 80
+		pitch_damping 4
 		yaw_stiffness 80
-		yaw_damping 5
+		yaw_damping 4
+		pitch_constraint -15 15
+		pitch_friction 0
+		yaw_constraint -15 15
+		yaw_friction 0
+		angle_constraint 10
 		along_stiffness 100
 		along_damping 0
-		pitch_constraint -79.999998 15
-		pitch_friction 0
 		pitch_bounce 0
-		yaw_constraint -19.999999 15
-		yaw_friction 0
 		yaw_bounce 0
-		angle_constraint 90.000003
 	}
 }
-$jigglebone "Cape_R1"
+$jigglebone "CapeJiggle02"
 {
 	is_flexible
 	{
-		length 20
-		tip_mass 10
-		pitch_stiffness 30
-		pitch_damping 5
-		yaw_stiffness 40
-		yaw_damping 5
-		along_stiffness 100
-		along_damping 0
-		pitch_constraint -60.000002 15
-		pitch_friction 0
-		pitch_bounce 0
-		yaw_constraint -15 19.999999
-		yaw_friction 0
-		yaw_bounce 0
-		angle_constraint 74.999999
-	}
-}
-$jigglebone "Cape_R2"
-{
-	is_flexible
-	{
-		length 25
-		tip_mass 12
-		pitch_stiffness 60
-		pitch_damping 5
+		length 30
+		tip_mass 5
+		pitch_stiffness 80
+		pitch_damping 4
 		yaw_stiffness 80
-		yaw_damping 5
+		yaw_damping 4
+		pitch_constraint -15 15
+		pitch_friction 0
+		yaw_constraint -15 15
+		yaw_friction 0
+		angle_constraint 10
 		along_stiffness 100
 		along_damping 0
-		pitch_constraint -79.999998 15
-		pitch_friction 0
 		pitch_bounce 0
-		yaw_constraint -15 19.999999
-		yaw_friction 0
 		yaw_bounce 0
-		angle_constraint 90.000003
+	}
+}
+$jigglebone "CapeJiggle03"
+{
+	is_flexible
+	{
+		length 35
+		tip_mass 5
+		pitch_stiffness 80
+		pitch_damping 4
+		yaw_stiffness 80
+		yaw_damping 4
+		pitch_constraint -15 15
+		pitch_friction 0
+		yaw_constraint -15 15
+		yaw_friction 0
+		angle_constraint 10
+		along_stiffness 100
+		along_damping 0
+		pitch_bounce 0
+		yaw_bounce 0
+	}
+}
+$jigglebone "CapeJiggle04"
+{
+	is_flexible
+	{
+		length 40
+		tip_mass 5
+		pitch_stiffness 80
+		pitch_damping 4
+		yaw_stiffness 80
+		yaw_damping 4
+		pitch_constraint -15 15
+		pitch_friction 0
+		yaw_constraint -15 15
+		yaw_friction 0
+		angle_constraint 10
+		along_stiffness 100
+		along_damping 0
+		pitch_bounce 0
+		yaw_bounce 0	
+	}
+}
+$jigglebone "CapeJiggle05"
+{
+	is_flexible
+	{
+		length 50
+		tip_mass 5
+		pitch_stiffness 80
+		pitch_damping 4
+		yaw_stiffness 80
+		yaw_damping 4
+		pitch_constraint -15 15
+		pitch_friction 0
+		yaw_constraint -15 15
+		yaw_friction 0
+		angle_constraint 10
+		along_stiffness 100
+		along_damping 0
+		pitch_bounce 0
+		yaw_bounce 0
 	}
 }
 
