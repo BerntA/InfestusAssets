@@ -86,7 +86,7 @@ $sequence "attack01" {
 	fadein 0.2
 	fadeout 0.2
 	fps 30
-	walkframe 56 LX LY
+	//walkframe 56 LX LY
 	weightlist "weightattacking"
 }
 
@@ -96,7 +96,7 @@ $sequence "attack02" {
 	fadein 0.2
 	fadeout 0.2
 	fps 30
-	walkframe 56 LX LY
+	//walkframe 56 LX LY
 	weightlist "weightattacking"
 }
 
