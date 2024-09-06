@@ -50,14 +50,25 @@ $sequence "idle03" {
 	fps 25
 }
 
+$animation a_bite "idle01.smd"
+$animation g_bite "attack01.smd" subtract a_bite 0
+
 $sequence "attack01" {
-	"attack01.smd"
+	"g_bite"
 	activity "ACT_MELEE_ATTACK1" 1
 	fadein 0.2
 	fadeout 0.2
 	fps 25
-	walkframe 5 LX LY
-	walkframe 15 LX LY
+	delta
+}
+
+$sequence "attack02" {
+	"g_bite"
+	activity "ACT_INF_MELEE_STAB" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 25
+	delta
 }
 
 $sequence "walk" {

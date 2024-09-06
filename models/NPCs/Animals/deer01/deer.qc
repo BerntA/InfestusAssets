@@ -65,12 +65,25 @@ $sequence "run" {
 	walkframe 29 LX LY
 }
 
+$animation a_bite "idle01.smd"
+$animation g_bite "attack01.smd" subtract a_bite 0
+
 $sequence "attack01" {
-	"attack01.smd"
+	"g_bite"
 	activity "ACT_MELEE_ATTACK1" 1
 	fadein 0.2
 	fadeout 0.2
-	fps 15
+	fps 20
+	delta
+}
+
+$sequence "attack02" {
+	"g_bite"
+	activity "ACT_INF_MELEE_STAB" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 20
+	delta
 }
 
 $sequence "ragdoll" {
