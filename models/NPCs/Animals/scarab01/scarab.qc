@@ -88,6 +88,10 @@ $sequence "attack01" {
 $sequence "death" "death.smd" activity ACT_INF_DEATH 1 fps 35
 $sequence "death_idle" "death_idle.smd" activity ACT_INF_DEATH_IDLE 1 fps 30
 
+$sequence "burrow_down" "burrow_in_to_ground.smd" activity ACT_BURROW_DOWN 1 fps 30
+$sequence "burrow_up" "burrow_from_ground.smd" activity ACT_BURROW_UP 1 fps 30
+$sequence "burrow_idle" "burrow_from_ground_idle.smd" activity ACT_BURROW_IDLE 1 fps 30
+
 $collisionjoints "phy.smd"
 {
 	$mass 5
