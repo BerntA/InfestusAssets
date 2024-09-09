@@ -94,8 +94,8 @@ $sequence "ragdoll" {
 	fps 1
 }
 
-$sequence "death" "ragdoll.smd" activity ACT_INF_DEATH 1 fps 30
-$sequence "death_idle" "ragdoll.smd" activity ACT_INF_DEATH_IDLE 1 fps 30
+$sequence "death" "death.smd" activity ACT_INF_DEATH 1 fps 30
+$sequence "death_idle" "death_idle.smd" activity ACT_INF_DEATH_IDLE 1 fps 30
 
 $collisionjoints "phy.smd"
 {
