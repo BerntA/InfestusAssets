@@ -60,6 +60,9 @@ It also has a wiki feature which exports all the data to a JSON file which can b
 ### Hammer Entities
 * trigger_changelevel - Redirects the player who touches the volume to a new map or dungeon.
 * func_player_blocker - A smart player clip which activates blocking based on whether or not the player has a certain item, reputation or quest. (with more adv. states)
+* func_transition - A smooth door transition from A to B.
+* func_detail_blocker - Prevents detail props from being distributed within its volume.
+* func_detail_model - Converts the brush to a model and embeds it into the bsp.
 * trigger_area_info - A volume which is used to tell the player if he is in a safe zone, pvp zone, no-mount zone, etc.
 * info_graveyard_point - When a player dies he will be respawned at a nearby graveyard.
 * info_start_point - A general start point.
@@ -88,6 +91,7 @@ It also has a wiki feature which exports all the data to a JSON file which can b
 * logic_stopwatch - Create a timed event, give unique rewards if the players manage to do what you want before the timer runs out.
 * logic_bernoulli - Can be used to trigger rare events with a better RNG.
 * env_night_cycle - Set Day Night Cycle in the map properties to override, use this entity to trigger on time based events, for example you may schedule an invasion event for 10pm.
+* func_night_scale - Alter the night scale intensity when inside this volume.
 
 Lots of legacy, and HL2 entities have been removed to make the game cheaper, simpler and to reduce the cost of networking. This enforces the use of the correct entities, the cheapest ones. All physics prop, and ragdoll stuff has also been removed.
 
