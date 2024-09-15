@@ -124,6 +124,20 @@ All players and combatant NPCs should have the correct attachment points, these 
 * waist_r
 * eyes - For all!
 
+### KeyValues
+A model can have various keyvalue properties, these can be used to alter behaviour on the client side, such as:
+* Cables - Spawn cables (ropes).
+* Particles - Spawn a particle at the given attachment, and set if it should follow, etc.
+* MagicModel - The model is a "particle" based model
+	* Dead & Alive variants
+	* name
+	* attachment_point
+* IgniteModel, 1 = always ignite model, 2 = only if the entity is not lootable.
+* NoShadows - Disable shadows.
+* NoGlow - Disable glow effect.
+* NoMatOverrides - Disable material override effects, like burn / frost fx.
+* NoFlexAnims - Disable flex anims like blinking, head orientation, etc. (used for perf, if the model does not have a default form - e.g not humanoid'ish)
+
 ### Textures
 Any 2D art should generally not have any compression, world textures, and model textures however should normally be DXT1 or DXT5. Keep the resolution around or under 1024x1024!
 
