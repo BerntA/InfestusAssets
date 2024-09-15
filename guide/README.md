@@ -244,6 +244,7 @@ Since combatant NPCs use weapons they need more animations
 Monster NPCs do not have any weapons and can generally have something like
 
 * Idle - ACT_IDLE
+* Idle Angry - ACT_IDLE_ANGRY (optional - use if you want a different idle anim when the NPC is engaged in combat)
 * Walk Cycle - ACT_WALK
 * Run Cycle - ACT_RUN
 * Death - ACT_INF_DEATH & ACT_INF_DEATH_IDLE
