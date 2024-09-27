@@ -2,7 +2,7 @@ $modelname "items/templar/chest.mdl"
 $model "studio" "chest.smd"
 
 $surfaceprop "flesh"
-$cdmaterials "models/items/templar/"
+$cdmaterials "models/characters/npc/mercenary/"
 
 $sequence "Idle" {
 	"idle.smd"

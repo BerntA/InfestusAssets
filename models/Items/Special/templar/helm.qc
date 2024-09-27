@@ -2,7 +2,7 @@ $modelname "items/templar/helm.mdl"
 $model "studio" "helm.smd"
 
 $surfaceprop "flesh"
-$cdmaterials "models/items/templar/"
+$cdmaterials "models/characters/npc/mercenary/"
 $illumposition 0 0 0 ValveBiped.Bip01_Head1
 
 $sequence "Idle" {
