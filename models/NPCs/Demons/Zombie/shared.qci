@@ -1,0 +1,213 @@
+$animation "a_walk2" "../Mummy/a_walk2.smd" {
+	fps 24
+	loop
+	ikrule "rfoot" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 48 48 target 0
+	ikrule "lfoot" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 48 48 target 1
+	walkframe 48 LX LY
+}
+
+$animation "a_walkE" "../Mummy/a_walkE.smd" {
+	fps 24
+	loop
+	ikrule "rfoot" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 29 29 target 0
+	ikrule "lfoot" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 29 29 target 1
+	walkframe 29 LX LY
+}
+
+$animation "a_walkNE" "../Mummy/a_walkNE.smd" {
+	fps 24
+	loop
+	ikrule "rfoot" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 29 29 target 0
+	ikrule "lfoot" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 29 29 target 1
+	walkframe 29 LX LY
+}
+
+$animation "a_walkN" "../Mummy/a_walkN.smd" {
+	fps 24
+	loop
+	ikrule "rfoot" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 47 47 target 0
+	ikrule "lfoot" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 47 47 target 1
+	walkframe 47 LX LY
+}
+
+$animation "a_walkNW" "../Mummy/a_walkNW.smd" {
+	fps 24
+	loop
+	ikrule "rfoot" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 47 47 target 0
+	ikrule "lfoot" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 47 47 target 1
+	walkframe 47 LX LY
+}
+
+$animation "a_walkW" "../Mummy/a_walkW.smd" {
+	fps 24
+	loop
+	ikrule "rfoot" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 47 47 target 0
+	ikrule "lfoot" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 47 47 target 1
+	walkframe 47 LX LY
+}
+
+$sequence "idle01" {
+	"../Mummy/Idle01.smd"
+	activity "ACT_IDLE" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 24
+	loop
+	ikrule "rfoot" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 53 53 target 0
+	ikrule "lfoot" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 53 53 target 1
+}
+
+// WALK
+$sequence "walk02" {
+	"a_walk2"
+	activity "ACT_WALK" 1
+	fadein 0.2
+	fadeout 0.2
+}
+
+$sequence "walk01" {
+	"a_walkE"
+	"a_walkNE"
+	"a_walkN"
+	"a_walkNW"
+	"a_walkW"
+	activity "ACT_WALK" 1
+	blend "move_yaw" -90 90
+	blendwidth 5
+	fadein 0.2
+	fadeout 0.2
+}
+
+// RUN
+$sequence "run02" {
+	"a_walk2"
+	activity "ACT_RUN" 1
+	fadein 0.2
+	fadeout 0.2
+}
+
+$sequence "run01" {
+	"a_walkE"
+	"a_walkNE"
+	"a_walkN"
+	"a_walkNW"
+	"a_walkW"
+	activity "ACT_RUN" 1
+	blend "move_yaw" -90 90
+	blendwidth 5
+	fadein 0.2
+	fadeout 0.2
+}
+
+// COMBAT
+
+$sequence "attackA" {
+	"../Mummy/attackA.smd"
+	activity "ACT_MELEE_ATTACK1" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	//ikrule "rfoot" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 53 53 target 0 usesequence 
+	//ikrule "lfoot" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 53 53 target 1 usesequence 
+	//walkframe 53 LX LY
+	weightlist "attacking"
+}
+
+$sequence "attackB" {
+	"../Mummy/attackB.smd"
+	activity "ACT_MELEE_ATTACK1" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	//ikrule "rfoot" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 53 53 target 0 usesequence 
+	//ikrule "lfoot" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 53 53 target 1 usesequence 
+	//walkframe 53 LX LY
+	weightlist "attacking"
+}
+
+$sequence "attackC" {
+	"../Mummy/attackC.smd"
+	activity "ACT_MELEE_ATTACK1" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	//ikrule "rfoot" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 53 53 target 0
+	//ikrule "lfoot" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 53 53 target 1
+	weightlist "attacking"
+}
+
+$sequence "attackD" {
+	"../Mummy/attackD.smd"
+	activity "ACT_MELEE_ATTACK1" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	//ikrule "rfoot" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 53 53 target 0
+	//ikrule "lfoot" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 53 53 target 1
+	weightlist "attacking"
+}
+
+$sequence "attackC_stab" {
+	"../Mummy/attackC.smd"
+	activity "ACT_INF_MELEE_STAB" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	weightlist "attacking"
+}
+
+$sequence "attackD_stab" {
+	"../Mummy/attackD.smd"
+	activity "ACT_INF_MELEE_STAB" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	weightlist "attacking"
+}
+
+// FLINCH
+$sequence "flinch1" {
+	"../Mummy/flinch1.smd"
+	activity "ACT_SMALL_FLINCH" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	ikrule "rfoot" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 20 20 target 0
+	ikrule "lfoot" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 20 20 target 1
+}
+
+$sequence "flinch2" {
+	"../Mummy/flinch2.smd"
+	activity "ACT_BIG_FLINCH" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	ikrule "rfoot" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 30 30 target 0
+	ikrule "lfoot" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 30 30 target 1
+}
+
+// DEATH
+$sequence "death_idle" {
+	"../Mummy/death_idle.smd"
+	fadein 0.2
+	fadeout 0.2
+	activity "ACT_INF_DEATH_IDLE" 1
+	fps 1
+	ikrule "rhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 0 0 target 0
+	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 0 0 target 1
+	ikrule "rfoot" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 0 0 target 2
+	ikrule "lfoot" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 0 0 target 3
+}
+
+$sequence "death" {
+	"../Mummy/death.smd"
+	fadein 0.2
+	fadeout 0.2
+	snap
+	activity "ACT_INF_DEATH" 1
+	fps 50
+	ikrule "rhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 30 30 target 0
+	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 30 30 target 1
+	ikrule "rfoot" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 30 30 target 2
+	ikrule "lfoot" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 30 30 target 3
+}
