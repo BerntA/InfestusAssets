@@ -76,7 +76,7 @@ $weightlist "attacking_right" {
 
 $sequence "idle01" {
 	"anims/idle1.smd"
-	activity "ACT_IDLE" 2
+	activity "ACT_IDLE" 3
 	fadein 1
 	fadeout 1
 	fps 15
@@ -92,7 +92,7 @@ $sequence "idle02" {
 
 $sequence "idle03" {
 	"anims/idle3.smd"
-	activity "ACT_IDLE" 1
+	activity "ACT_IDLE" 2
 	fadein 1
 	fadeout 1
 	fps 24
@@ -106,20 +106,19 @@ $sequence "idle04" {
 	fps 24
 }
 
+$sequence "idle_combat" {
+	"anims/idle1.smd"
+	activity "ACT_IDLE_ANGRY" 1
+	fadein 1
+	fadeout 1
+	fps 15
+}
+
 $animation a_bite "anims/mod.smd"
-$animation g_bite01 "anims/attack_F.smd" subtract a_bite 0
+$animation g_bite "anims/attack_F.smd" subtract a_bite 0
 
-$sequence "attack01" {
-	"g_bite01"
-	activity "ACT_MELEE_ATTACK1" 1
-	fadein 0.2
-	fadeout 0.2
-	fps 25
-	delta
-}
-
-$sequence "attack01_stab" {
-	"g_bite01"
+$sequence "attack_stab" {
+	"g_bite"
 	activity "ACT_INF_MELEE_STAB" 1
 	fadein 0.2
 	fadeout 0.2
@@ -127,7 +126,7 @@ $sequence "attack01_stab" {
 	delta
 }
 
-$sequence "attack02" {
+$sequence "attack_right" {
 	"anims/attack_L.smd"
 	activity "ACT_MELEE_ATTACK1" 1
 	fadein 0.2
@@ -136,27 +135,9 @@ $sequence "attack02" {
 	weightlist "attacking_right"
 }
 
-$sequence "attack02_stab" {
-	"anims/attack_L.smd"
-	activity "ACT_INF_MELEE_STAB" 1
-	fadein 0.2
-	fadeout 0.2
-	fps 25
-	weightlist "attacking_right"
-}
-
-$sequence "attack03" {
+$sequence "attack_left" {
 	"anims/attack_R.smd"
 	activity "ACT_MELEE_ATTACK1" 1
-	fadein 0.2
-	fadeout 0.2
-	fps 25
-	weightlist "attacking_left"
-}
-
-$sequence "attack03_stab" {
-	"anims/attack_R.smd"
-	activity "ACT_INF_MELEE_STAB" 1
 	fadein 0.2
 	fadeout 0.2
 	fps 25

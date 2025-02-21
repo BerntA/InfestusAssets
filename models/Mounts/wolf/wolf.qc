@@ -27,17 +27,17 @@ $ikchain "flfoot" "FrontLeftPaw" Z 0
 $ikchain "brfoot" "BackRightPaw01" Z 0
 $ikchain "blfoot" "BackLeftPaw" Z 0
 
-$animation a_RunS "anims/run_s" loop LX LY startloop 0 rotateto -180 fps 40
-$animation a_RunSE "anims/run_se" loop LX LY startloop 0 rotateto -135 fps 40
-$animation a_RunE "anims/run_e" loop LX LY startloop 0 rotateto -90 fps 40
-$animation a_RunNE "anims/run_ne" loop LX LY startloop 0 rotateto -45 fps 40
-$animation a_RunN "anims/run_n" loop LX LY startloop 0 rotateto 0 fps 40
-$animation a_RunNW "anims/run_nw" loop LX LY startloop 0 rotateto 45  fps 40
-$animation a_RunW "anims/run_w" loop LX LY startloop 0 rotateto 90 fps 40
-$animation a_RunSW "anims/run_sw" loop LX LY startloop 0 rotateto 135 fps 40
+$animation a_RunS "../../NPCs/Animals/wolf01/anims/run_s" loop LX LY startloop 0 rotateto -180 fps 40
+$animation a_RunSE "../../NPCs/Animals/wolf01/anims/run_se" loop LX LY startloop 0 rotateto -135 fps 40
+$animation a_RunE "../../NPCs/Animals/wolf01/anims/run_e" loop LX LY startloop 0 rotateto -90 fps 40
+$animation a_RunNE "../../NPCs/Animals/wolf01/anims/run_ne" loop LX LY startloop 0 rotateto -45 fps 40
+$animation a_RunN "../../NPCs/Animals/wolf01/anims/run_n" loop LX LY startloop 0 rotateto 0 fps 40
+$animation a_RunNW "../../NPCs/Animals/wolf01/anims/run_nw" loop LX LY startloop 0 rotateto 45  fps 40
+$animation a_RunW "../../NPCs/Animals/wolf01/anims/run_w" loop LX LY startloop 0 rotateto 90 fps 40
+$animation a_RunSW "../../NPCs/Animals/wolf01/anims/run_sw" loop LX LY startloop 0 rotateto 135 fps 40
 
 $sequence "idle01" {
-	"anims/idle01.smd"
+	"../../NPCs/Animals/wolf01/anims/idle01.smd"
 	activity "ACT_INF_UNARMED_IDLE" 1
 	fadein 1
 	fadeout 1
@@ -46,7 +46,7 @@ $sequence "idle01" {
 }
 
 $sequence "idle02" {
-	"anims/idle02.smd"
+	"../../NPCs/Animals/wolf01/anims/idle02.smd"
 	activity "ACT_INF_UNARMED_IDLE" 1
 	fadein 1
 	fadeout 1
@@ -55,7 +55,7 @@ $sequence "idle02" {
 }
 
 $sequence "idle03" {
-	"anims/idle03.smd"
+	"../../NPCs/Animals/wolf01/anims/idle03.smd"
 	activity "ACT_INF_UNARMED_IDLE" 1
 	fadein 1
 	fadeout 1
@@ -63,7 +63,7 @@ $sequence "idle03" {
 	loop
 }
 
-$sequence "jump" "anims/jump.smd" activity ACT_3PV_HL2MP_JUMP_SHORTSWORD 1 fps 60.00
+$sequence "jump" "../../NPCs/Animals/wolf01/anims/jump.smd" activity ACT_3PV_HL2MP_JUMP_SHORTSWORD 1 fps 60.00
 
 $sequence "run" {
 	a_RunS a_RunSE a_RunE
@@ -75,7 +75,7 @@ $sequence "run" {
 }
 
 $sequence "ragdoll" {
-	"anims/ragdoll.smd"
+	"../../NPCs/Animals/wolf01/anims/ragdoll.smd"
 	activity "ACT_DIERAGDOLL" 1
 	fadein 0.2
 	fadeout 0.2
