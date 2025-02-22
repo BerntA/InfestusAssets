@@ -1,0 +1,6 @@
+
+$includemodel "humans/male_shared.mdl"
+$includemodel "humans/male_ss.mdl"
+$includemodel "humans/male_gestures.mdl"
+$includemodel "humans/male_postures.mdl"
+$includemodel "characters/anims/shared.mdl"
