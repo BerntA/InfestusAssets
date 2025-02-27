@@ -14,6 +14,13 @@ $eyeposition 0 0 40
 $cdmaterials "models/characters/npc/bear/"
 $attachment "eyes" "mouth_top" 0.00 0.00 -7.00 rotate 45 -90 -90
 
+$texturegroup "skinfamilies"
+{
+	{ "bear01" "bear01_hair" }
+	{ "bear02" "bear02_hair" }
+	{ "bear03" "bear03_hair" }
+}
+
 $weightlist "attacking_left" {
 	"root" "0"
 	"bear" "0"
