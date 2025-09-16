@@ -130,7 +130,7 @@ $sequence "walk" {
 	activity "ACT_WALK" 1
 	fadein 0.2
 	fadeout 0.2
-	fps 30
+	fps 50
 	loop
 	walkframe 14 LX LY
 }
@@ -140,7 +140,7 @@ $sequence "run" {
 	activity "ACT_RUN" 1
 	fadein 0.2
 	fadeout 0.2
-	fps 30
+	fps 50
 	loop
 	walkframe 6 LX LY
 }
