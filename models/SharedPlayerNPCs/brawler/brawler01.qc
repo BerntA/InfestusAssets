@@ -378,3 +378,5 @@ $sequence "cast_end_instant" {
 
 $ikautoplaylock "rfoot" 1 0.1
 $ikautoplaylock "lfoot" 1 0.1
+
+$includemodel "characters/anims/simple.mdl"
