@@ -43,7 +43,6 @@ $attachment "chest" "ValveBiped.Bip01_Spine4" -9 0 6 rotate 0 0 0
 
 $cbox 0 0 0 0 0 0
 $bbox -19.652 -31.255 -8.499 31.825 31.827 77.397
-$skipboneinbbox
 
 $sequence "idle" {
 	"idle01.smd"

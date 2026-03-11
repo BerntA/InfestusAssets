@@ -33,8 +33,6 @@ $attachment "flame" "ValveBiped.Bip01_Spine2" -20 4 0 rotate 0 90 90
 $cbox 0 0 0 0 0 0
 $bbox -13 -13 0 13 13 72
 
-$skipboneinbbox
-
 $bonemerge "ValveBiped.Bip01_Pelvis"
 $bonemerge "ValveBiped.Bip01_Spine"
 $bonemerge "ValveBiped.Bip01_Spine1"

@@ -31,8 +31,6 @@ $attachment "waist_r" "ValveBiped.Bip01_Spine" 0 1 -7 rotate -105 0 30
 $cbox 0 0 0 0 0 0
 $bbox -13 -13 0 13 13 72
 
-$skipboneinbbox
-
 $bonemerge "ValveBiped.Bip01_Pelvis"
 $bonemerge "ValveBiped.Bip01_Spine"
 $bonemerge "ValveBiped.Bip01_Spine1"

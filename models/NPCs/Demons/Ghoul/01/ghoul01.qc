@@ -43,19 +43,6 @@ $attachment "waist_r" "ValveBiped.Bip01_Spine" 0 1 -7 rotate -105 0 30
 $cbox 0 0 0 0 0 0
 $bbox -13 -13 0 13 13 72
 
-$skipboneinbbox
-
-$bonemerge "ValveBiped.Bip01_Pelvis"
-$bonemerge "ValveBiped.Bip01_Spine"
-$bonemerge "ValveBiped.Bip01_Spine1"
-$bonemerge "ValveBiped.Bip01_Spine2"
-$bonemerge "ValveBiped.Bip01_Spine4"
-$bonemerge "ValveBiped.Bip01_R_Clavicle"
-$bonemerge "ValveBiped.Bip01_R_UpperArm"
-$bonemerge "ValveBiped.Bip01_R_Forearm"
-$bonemerge "ValveBiped.Bip01_R_Hand"
-$bonemerge "ValveBiped.Anim_Attachment_RH"
-
 $ikchain "rhand" "ValveBiped.Bip01_R_Hand" knee 0.707 0.707 0
 $ikchain "lhand" "ValveBiped.Bip01_L_Hand" knee 0.707 0.707 0
 $ikchain "rfoot" "ValveBiped.Bip01_R_Foot" knee 0.707 -0.707 0
