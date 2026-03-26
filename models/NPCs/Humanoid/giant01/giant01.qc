@@ -25,6 +25,12 @@ $bodygroup helm
 	studio "crown.smd"
 }
 
+$bodygroup chest 
+{
+	blank
+	studio "armor/chest.smd"
+}
+
 $surfaceprop "flesh"
 $contents "solid"
 $illumposition -1.099 -2.032 54.056
@@ -37,6 +43,7 @@ $cdmaterials "models/items/helmets/plate/"
 $cdmaterials "models/items/helmets/mail/"
 $cdmaterials "models/characters/npc/smugglers/"
 $cdmaterials "models/characters/npc/guard/"
+$cdmaterials "models/items/chests/plate/"
 
 $texturegroup "skinfamilies"
 {
