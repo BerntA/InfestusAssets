@@ -29,6 +29,7 @@ $bodygroup chest
 {
 	blank
 	studio "armor/chest.smd"
+	studio "armor/sovereign.smd"
 }
 
 $surfaceprop "flesh"
