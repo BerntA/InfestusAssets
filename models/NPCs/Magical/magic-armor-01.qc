@@ -47,12 +47,14 @@ $keyvalues
 			name				"fire_verysmall_01"
 			attachment_type		"follow_attachment"
 			attachment_point	"eye_l"
+			allow_lootable		"0"
 		}
 		effect
 		{
 			name				"fire_verysmall_01"
 			attachment_type		"follow_attachment"
 			attachment_point	"eye_r"
+			allow_lootable		"0"
 		}
 	}
 	
@@ -60,4 +62,5 @@ $keyvalues
 	"NoGlow" "1"
 	"NoMatOverrides" "1"
 	"NoFlexAnims" "0"
+	"DissolveOnDeath" "1"
 }
