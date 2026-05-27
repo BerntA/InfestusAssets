@@ -713,5 +713,23 @@ $sequence "sittostand" {
 	fps 15
 }
 
+$sequence "work_blacksmithing_01" {
+	"anims/work_anvil.smd"
+	activity "ACT_INF_WORK_BLACKSMITH_LONG" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	loop
+}
+
+$sequence "work_blacksmithing_02" {
+	"anims/work_anvil.smd"
+	activity "ACT_INF_WORK_BLACKSMITH_SHORT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	loop
+}
+
 $sequence "death" "anims/death.smd" activity ACT_INF_DEATH 1 fps 20 node "standing"
 $sequence "death_idle" "anims/death_idle.smd" activity ACT_INF_DEATH_IDLE 1 fps 70 node "standing"
