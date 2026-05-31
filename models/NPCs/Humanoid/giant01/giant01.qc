@@ -714,7 +714,7 @@ $sequence "sittostand" {
 }
 
 $sequence "work_blacksmithing_01" {
-	"anims/work_anvil.smd"
+	"anims/work_anvil_hard.smd"
 	activity "ACT_INF_WORK_BLACKSMITH_LONG" 1
 	fadein 0.2
 	fadeout 0.2
