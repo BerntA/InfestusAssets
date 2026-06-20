@@ -3,6 +3,12 @@ $model "studio" "ref.smd"
 $surfaceprop "metal"
 $cdmaterials "models/items/maces/"
 
+$texturegroup skinfamilies
+{
+	{ "mace11"  }
+	{ "mace11_gold" }
+}
+
 $sequence "idle" {
 	"idle.smd"
 	fadein 0.2
