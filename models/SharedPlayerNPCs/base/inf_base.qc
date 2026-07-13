@@ -70,6 +70,66 @@ $weightlist "weightattacking" {
 	 "ValveBiped.Bip01_R_Finger02" 1
 }
 
+$weightlist "spin" {
+	 "ValveBiped.Bip01_Pelvis" 1
+	 "ValveBiped.Bip01_Spine" 1
+	 "ValveBiped.Bip01_Spine1" 1
+	 "ValveBiped.Bip01_Spine2" 1
+	 "ValveBiped.Bip01_Spine4" 1
+	 "ValveBiped.Bip01_Neck1" 1
+	 "ValveBiped.Bip01_Head1" 1
+	 "ValveBiped.forward" 1
+	 "ValveBiped.Bip01_R_Clavicle" 1
+	 "ValveBiped.Bip01_R_UpperArm" 1
+	 "ValveBiped.Bip01_R_Forearm" 1
+	 "ValveBiped.Bip01_R_Hand" 1
+	 "ValveBiped.Bip01_R_Wrist" 1
+	 "ValveBiped.Anim_Attachment_RH" 1
+	 "ValveBiped.Bip01_L_Clavicle" 1
+	 "ValveBiped.Bip01_L_UpperArm" 1
+	 "ValveBiped.Bip01_L_Forearm" 1
+	 "ValveBiped.Bip01_L_Hand" 1
+	 "ValveBiped.Anim_Attachment_LH" 1
+	 "ValveBiped.Bip01_R_Thigh" 1
+	 "ValveBiped.Bip01_R_Calf" 1
+	 "ValveBiped.Bip01_R_Foot" 1
+	 "ValveBiped.Bip01_R_Toe0" 1
+	 "ValveBiped.Bip01_L_Thigh" 1
+	 "ValveBiped.Bip01_L_Calf" 1
+	 "ValveBiped.Bip01_L_Foot" 1
+	 "ValveBiped.Bip01_L_Toe0" 1
+	 "ValveBiped.Bip01_L_Finger4" 1
+	 "ValveBiped.Bip01_L_Finger41" 1
+	 "ValveBiped.Bip01_L_Finger42" 1
+	 "ValveBiped.Bip01_L_Finger3" 1
+	 "ValveBiped.Bip01_L_Finger31" 1
+	 "ValveBiped.Bip01_L_Finger32" 1
+	 "ValveBiped.Bip01_L_Finger2" 1
+	 "ValveBiped.Bip01_L_Finger21" 1
+	 "ValveBiped.Bip01_L_Finger22" 1
+	 "ValveBiped.Bip01_L_Finger1" 1
+	 "ValveBiped.Bip01_L_Finger11" 1
+	 "ValveBiped.Bip01_L_Finger12" 1
+	 "ValveBiped.Bip01_L_Finger0" 1
+	 "ValveBiped.Bip01_L_Finger01" 1
+	 "ValveBiped.Bip01_L_Finger02" 1
+	 "ValveBiped.Bip01_R_Finger4" 1
+	 "ValveBiped.Bip01_R_Finger41" 1
+	 "ValveBiped.Bip01_R_Finger42" 1
+	 "ValveBiped.Bip01_R_Finger3" 1
+	 "ValveBiped.Bip01_R_Finger31" 1
+	 "ValveBiped.Bip01_R_Finger32" 1
+	 "ValveBiped.Bip01_R_Finger2" 1
+	 "ValveBiped.Bip01_R_Finger21" 1
+	 "ValveBiped.Bip01_R_Finger22" 1
+	 "ValveBiped.Bip01_R_Finger1" 1
+	 "ValveBiped.Bip01_R_Finger11" 1
+	 "ValveBiped.Bip01_R_Finger12" 1
+	 "ValveBiped.Bip01_R_Finger0" 1
+	 "ValveBiped.Bip01_R_Finger01" 1
+	 "ValveBiped.Bip01_R_Finger02" 1
+}
+
 $sequence "merch_greet1" {
 	"anims\aoc_cheer.smd"
 	activity "ACT_INF_GREETINGS" 1
@@ -943,4 +1003,66 @@ $sequence "cast_end_instant" {
 	fadeout 0.2
 	fps 35
 	weightlist "weightattacking"
+}
+
+// SPIN
+
+$sequence "attack_1h_spin" {
+	"anims/attack_1h_spin.smd"
+	activity "ACT_INF_MELEE_1H_SPIN" 1
+	fps 75
+	ikrule "rhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 40 40 target 0
+	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 40 40 target 1
+	weightlist "spin"
+	rotate 90
+}
+
+$sequence "attack_1h_spin_loop" {
+	"anims/attack_1h_spin_loop.smd"
+	activity "ACT_INF_MELEE_1H_SPIN_LOOP" 1
+	fps 100
+	ikrule "rhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 40 40 target 0
+	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 40 40 target 1
+	weightlist "spin"
+	rotate 90
+}
+
+$sequence "attack_2h_sharp_spin" {
+	"anims/attack_2h_sharp_spin.smd"
+	activity "ACT_INF_MELEE_2H_SPIN" 1
+	fps 75
+	ikrule "rhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 40 40 target 0
+	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 40 40 target 1
+	weightlist "spin"
+	//rotate 90
+}
+
+$sequence "attack_2h_sharp_spin_loop" {
+	"anims/attack_2h_sharp_spin_loop.smd"
+	activity "ACT_INF_MELEE_2H_SPIN_LOOP" 1
+	fps 100
+	ikrule "rhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 40 40 target 0
+	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 40 40 target 1
+	weightlist "spin"
+	//rotate 90
+}
+
+$sequence "attack_2h_blunt_spin" {
+	"anims/attack_2h_blunt_spin.smd"
+	activity "ACT_INF_MELEE_2H_BLUNT_SPIN" 1
+	fps 75
+	ikrule "rhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 40 40 target 0
+	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 40 40 target 1
+	weightlist "spin"
+	//rotate 90
+}
+
+$sequence "attack_2h_blunt_spin_loop" {
+	"anims/attack_2h_blunt_spin_loop.smd"
+	activity "ACT_INF_MELEE_2H_BLUNT_SPIN_LOOP" 1
+	fps 100
+	ikrule "rhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 40 40 target 0
+	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 40 40 target 1
+	weightlist "spin"
+	//rotate 90
 }
